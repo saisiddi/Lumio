@@ -1,0 +1,104 @@
+{
+  "https://www.google.com/": [
+    {
+      "scan_time": "2026-04-25T11:54:19.676369+00:00",
+      "total_violations": 4,
+      "signatures": [
+        "https://www.google.com/::html-has-lang::html",
+        "https://www.google.com/::landmark-one-main::html",
+        "https://www.google.com/::page-has-heading-one::html",
+        "https://www.google.com/::region::body > div:nth-child(1) > div"
+      ],
+      "new_issues": 4,
+      "resolved_issues": 0
+    },
+    {
+      "scan_time": "2026-04-25T12:09:26.127791+00:00",
+      "total_violations": 4,
+      "signatures": [
+        "https://www.google.com/::html-has-lang::html",
+        "https://www.google.com/::landmark-one-main::html",
+        "https://www.google.com/::page-has-heading-one::html",
+        "https://www.google.com/::region::body > div:nth-child(1) > div"
+      ],
+      "new_issues": 0,
+      "resolved_issues": 0
+    },
+    {
+      "scan_time": "2026-04-25T12:18:40.792793+00:00",
+      "total_violations": 12,
+      "signatures": [
+        "https://www.google.com/::html-has-lang::html",
+        "https://www.google.com/::landmark-one-main::html",
+        "https://www.google.com/::page-has-heading-one::html",
+        "https://www.google.com/::region::body > div:nth-child(1) > div",
+        "https://www.google.com/policies/terms/::landmark-one-main::html",
+        "https://www.google.com/policies/terms/::landmark-unique::.gb_a > div > .oTqstd > div[role=\"navigation\"]",
+        "https://www.google.com/policies/terms/::list::.xXnO1d:nth-child(3) > .nrAB0c > ul",
+        "https://www.google.com/policies/terms/::region::.xXnO1d:nth-child(1) > .nrAB0c > .m2dIJf.w94E5e",
+        "https://www.google.com/policies/terms/privacy::aria-allowed-attr::#logo",
+        "https://www.google.com/policies/terms/privacy::landmark-one-main::html",
+        "https://www.google.com/policies/terms/privacy::page-has-heading-one::html",
+        "https://www.google.com/policies/terms/privacy::region::a"
+      ],
+      "new_issues": 8,
+      "resolved_issues": 0
+    },
+    {
+      "scan_time": "2026-04-25T12:29:15.438327+00:00",
+      "total_violations": 12,
+      "signatures": [
+        "https://www.google.com/::html-has-lang::html",
+        "https://www.google.com/::landmark-one-main::html",
+        "https://www.google.com/::page-has-heading-one::html",
+        "https://www.google.com/::region::body > div:nth-child(1) > div",
+        "https://www.google.com/policies/terms/::landmark-one-main::html",
+        "https://www.google.com/policies/terms/::landmark-unique::.gb_a > div > .oTqstd > div[role=\"navigation\"]",
+        "https://www.google.com/policies/terms/::list::.xXnO1d:nth-child(3) > .nrAB0c > ul",
+        "https://www.google.com/policies/terms/::region::.xXnO1d:nth-child(1) > .nrAB0c > .m2dIJf.w94E5e",
+        "https://www.google.com/policies/terms/privacy::aria-allowed-attr::#logo",
+        "https://www.google.com/policies/terms/privacy::landmark-one-main::html",
+        "https://www.google.com/policies/terms/privacy::page-has-heading-one::html",
+        "https://www.google.com/policies/terms/privacy::region::a"
+      ],
+      "new_issues": 0,
+      "resolved_issues": 0
+    },
+    {
+      "scan_time": "2026-04-25T12:29:53.505834+00:00",
+      "total_violations": 4,
+      "signatures": [
+        "https://www.google.com/::html-has-lang::html",
+        "https://www.google.com/::landmark-one-main::html",
+        "https://www.google.com/::page-has-heading-one::html",
+        "https://www.google.com/::region::body > div:nth-child(1) > div"
+      ],
+      "new_issues": 0,
+      "resolved_issues": 8
+    },
+    {
+      "scan_time": "2026-04-25T12:33:04.802638+00:00",
+      "total_violations": 4,
+      "signatures": [
+        "https://www.google.com/::html-has-lang::html",
+        "https://www.google.com/::landmark-one-main::html",
+        "https://www.google.com/::page-has-heading-one::html",
+        "https://www.google.com/::region::body > div:nth-child(1) > div"
+      ],
+      "new_issues": 0,
+      "resolved_issues": 0
+    },
+    {
+      "scan_time": "2026-04-25T12:34:35.900522+00:00",
+      "total_violations": 4,
+      "signatures": [
+        "https://www.google.com/::html-has-lang::html",
+        "https://www.google.com/::landmark-one-main::html",
+        "https://www.google.com/::page-has-heading-one::html",
+        "https://www.google.com/::region::body > div:nth-child(1) > div"
+      ],
+      "new_issues": 0,
+      "resolved_issues": 0
+    }
+  ]
+}
