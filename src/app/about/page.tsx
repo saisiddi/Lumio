@@ -32,7 +32,7 @@ const team = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-brand-black pt-32 pb-24">
+    <div className="min-h-screen bg-brand-midnight pt-32 pb-24">
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Header */}
@@ -63,14 +63,14 @@ export default function AboutPage() {
               transition={{ duration: 0.8, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="glass-card rounded-3xl p-6 group hover:-translate-y-2 transition-transform duration-500 relative overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-electric/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative z-10 text-center">
                 <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-6 border border-white/10 shadow-[0_0_20px_rgba(0,0,0,0.5)]">
                   <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-1">{member.name}</h3>
-                <p className="text-brand-blue text-sm font-medium tracking-wide mb-4">{member.role}</p>
+                <p className="text-brand-electric text-sm font-medium tracking-wide mb-4">{member.role}</p>
                 <p className="text-zinc-400 text-sm font-light leading-relaxed mb-6">
                   {member.bio}
                 </p>
@@ -101,9 +101,9 @@ export default function AboutPage() {
           <div className="relative border-l border-white/10 ml-4 md:ml-0 md:pl-0 space-y-12">
             
             <div className="relative pl-8 md:pl-1/2 md:flex items-center justify-between">
-              <div className="absolute left-[-5px] md:left-[50%] md:-translate-x-[5px] w-2.5 h-2.5 rounded-full bg-brand-blue shadow-[0_0_10px_rgba(0,229,255,0.8)]" />
+              <div className="absolute left-[-5px] md:left-[50%] md:-translate-x-[5px] w-2.5 h-2.5 rounded-full bg-brand-electric shadow-[0_0_10px_rgba(59,130,246,0.8)]" />
               <div className="md:w-[45%] text-left md:text-right md:pr-12">
-                <div className="text-sm font-mono text-brand-blue mb-1">Hour 1</div>
+                <div className="text-sm font-mono text-brand-electric mb-1">Hour 1</div>
                 <h4 className="text-xl font-bold text-white mb-2">Ideation</h4>
                 <p className="text-zinc-400 font-light">Defined the core problem: Accessibility audits are boring. We decided to make them cinematic.</p>
               </div>

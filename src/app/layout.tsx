@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const space = Space_Grotesk({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
-  title: "Lumion | AI-Powered Accessibility Auditor",
+  title: "Lumio | AI-Powered Accessibility Auditor",
   description: "Make the Web Accessible for Everyone. Scan websites, reveal issues, and suggest instant fixes.",
 };
 
@@ -19,11 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${space.variable} dark`}>
-      <body className="antialiased min-h-screen flex flex-col">
+    <html lang="en" className={`${inter.variable} ${space.variable} dark`} suppressHydrationWarning>
+      <body className="antialiased min-h-screen flex flex-col" suppressHydrationWarning>
         <AuthProvider>
           <Navbar />
-          <main className="flex-1 pt-20">
+          <main className="flex-1">
             {children}
           </main>
           <Footer />

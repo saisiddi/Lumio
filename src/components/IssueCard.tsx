@@ -12,11 +12,11 @@ export function IssueCard({ issue }: { issue: Issue }) {
   const getSeverityConfig = () => {
     switch (issue.severity) {
       case "critical":
-        return { icon: AlertCircle, color: "text-red-400", bg: "bg-red-500/10", border: "border-red-500/20" };
+        return { icon: AlertCircle, color: "text-status-error", bg: "bg-status-error/10", border: "border-status-error/20" };
       case "moderate":
-        return { icon: AlertTriangle, color: "text-yellow-400", bg: "bg-yellow-500/10", border: "border-yellow-500/20" };
+        return { icon: AlertTriangle, color: "text-status-warning", bg: "bg-status-warning/10", border: "border-status-warning/20" };
       case "minor":
-        return { icon: Info, color: "text-blue-400", bg: "bg-blue-500/10", border: "border-blue-500/20" };
+        return { icon: Info, color: "text-brand-electric", bg: "bg-brand-electric/10", border: "border-brand-electric/20" };
     }
   };
 
@@ -68,7 +68,7 @@ export function IssueCard({ issue }: { issue: Issue }) {
 
               <div>
                 <h4 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-2">Suggested Fix</h4>
-                <p className="text-brand-blue text-sm mb-4">{issue.suggestedFix}</p>
+                <p className="text-brand-electric text-sm mb-4">{issue.suggestedFix}</p>
                 
                 {issue.codeSnippet && (
                   <CodeCompare 

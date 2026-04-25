@@ -40,13 +40,13 @@ export function PuzzleAnalysis({ progress }: { progress: number }) {
       label: TECH_TERMS[Math.floor(Math.random() * TECH_TERMS.length)],
       Icon: ICONS[Math.floor(Math.random() * ICONS.length)],
       hasTree: Math.random() > 0.7,
-      color: Math.random() > 0.5 ? "#00E5FF" : "#8B5CF6",
+      color: Math.random() > 0.5 ? "#3B82F6" : "#8B5CF6",
     }));
     setPieces(newPieces);
   }, []);
 
   return (
-    <div className={`relative w-full max-w-4xl aspect-video mx-auto bg-brand-black rounded-3xl overflow-hidden shadow-[0_0_100px_rgba(0,0,0,1)] border transition-all duration-1000 flex items-center justify-center ${progress === 100 ? "border-brand-neon/50 shadow-[0_0_80px_rgba(217,255,0,0.1)]" : "border-white/5"}`}>
+    <div className={`relative w-full max-w-4xl aspect-video mx-auto bg-brand-midnight rounded-3xl overflow-hidden shadow-[0_0_100px_rgba(0,0,0,1)] border transition-all duration-1000 flex items-center justify-center ${progress === 100 ? "border-brand-electric/50 shadow-[0_0_80px_rgba(59,130,246,0.1)]" : "border-white/5"}`}>
       
       {/* Dynamic Circuitry Background */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
@@ -126,12 +126,12 @@ export function PuzzleAnalysis({ progress }: { progress: number }) {
 
       {/* Progress Info Overlay */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-        <div className="text-brand-neon font-mono text-sm tracking-widest uppercase font-bold">
+        <div className="text-brand-electric font-mono text-sm tracking-widest uppercase font-bold">
           Assembling Intelligence Matrix: {Math.round(progress)}%
         </div>
         <div className="w-64 h-1 bg-white/10 rounded-full overflow-hidden">
           <motion.div 
-            className="h-full bg-brand-neon"
+            className="h-full bg-brand-electric"
             animate={{ width: `${progress}%` }}
           />
         </div>

@@ -1,20 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-black: #050505;
-  --color-brand-navy: #0A0A0A;
-  --color-brand-neon: #D9FF00; /* Lando Neon Yellow */
-  --color-brand-blue: #00E5FF;
-  --color-background: var(--color-brand-black);
-  --color-foreground: #FFFFFF;
+  --color-brand-midnight: #0A0A0B;
+  --color-brand-graphite: #121418;
+  --color-brand-slate: #1A1D24;
+  --color-brand-electric: #3B82F6;
+  --color-brand-violet: #8B5CF6;
+  --color-text-pure: #F8FAFC;
+  --color-text-cool: #94A3B8;
+  --color-border-steel: #27303F;
+  --color-status-success: #10B981;
+  --color-status-warning: #F59E0B;
+  --color-status-error: #EF4444;
+
+  --color-background: var(--color-brand-midnight);
+  --color-foreground: var(--color-text-pure);
   
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 :root {
-  --background: #050505;
-  --foreground: #FFFFFF;
+  --background: #0A0A0B;
+  --foreground: #F8FAFC;
 }
 
 body {
@@ -26,58 +34,70 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Viewport Frame - Lando Style Glow */
+/* Viewport Frame - Subtle Electric Glow */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 100;
-  box-shadow: inset 0 0 100px rgba(0, 229, 255, 0.05), inset 0 0 20px rgba(0, 229, 255, 0.1);
-  border: 4px solid rgba(255, 255, 255, 0.02);
+  box-shadow: inset 0 0 100px rgba(59, 130, 246, 0.03), inset 0 0 20px rgba(59, 130, 246, 0.05);
+  border: 4px solid rgba(255, 255, 255, 0.01);
+  transition: opacity 0.3s ease;
+}
+
+/* When the hero white overlay is active, hide the body frame and navbar */
+body.hero-white-active::after {
+  opacity: 0;
+}
+
+body.hero-white-active nav {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.3s ease;
 }
 
 /* Typography styles */
-@utility text-stroke-neon {
-  -webkit-text-stroke: 1px rgba(217, 255, 0, 0.3);
+@utility text-stroke-electric {
+  -webkit-text-stroke: 1px rgba(59, 130, 246, 0.3);
   color: transparent;
 }
 
 @utility text-stroke-white {
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+  -webkit-text-stroke: 1px rgba(248, 250, 252, 0.1);
   color: transparent;
 }
 
 /* Advanced Premium Glassmorphism utilities */
 @utility glass {
-  background: rgba(10, 10, 10, 0.5);
+  background: rgba(26, 29, 36, 0.5); /* Deep Slate */
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(39, 48, 63, 0.5); /* Muted Steel */
 }
 
 @utility glass-card {
-  background: linear-gradient(180deg, rgba(20,20,20,0.4) 0%, rgba(5,5,5,0.6) 100%);
+  background: linear-gradient(180deg, rgba(26, 29, 36, 0.7) 0%, rgba(18, 20, 24, 0.8) 100%);
   backdrop-filter: blur(32px);
   -webkit-backdrop-filter: blur(32px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.8), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(39, 48, 63, 0.6);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(248, 250, 252, 0.05);
 }
 
-@utility text-glow-neon {
-  text-shadow: 0 0 20px rgba(217, 255, 0, 0.6), 0 0 40px rgba(217, 255, 0, 0.2);
-}
-
-@utility text-glow-blue {
-  text-shadow: 0 0 20px rgba(0, 229, 255, 0.6), 0 0 40px rgba(0, 229, 255, 0.2);
+@utility text-glow-electric {
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.4), 0 0 40px rgba(59, 130, 246, 0.1);
 }
 
 @utility text-glow-violet {
-  text-shadow: 0 0 20px rgba(139, 92, 246, 0.6), 0 0 40px rgba(139, 92, 246, 0.2);
+  text-shadow: 0 0 20px rgba(139, 92, 246, 0.4), 0 0 40px rgba(139, 92, 246, 0.1);
 }
 
-@utility box-glow-blue {
-  box-shadow: 0 0 20px rgba(0, 229, 255, 0.3), 0 0 60px rgba(0, 229, 255, 0.1);
+@utility box-glow-electric {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.2), 0 0 60px rgba(59, 130, 246, 0.05);
+}
+
+@utility box-glow-violet {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.2), 0 0 60px rgba(139, 92, 246, 0.05);
 }
 
 /* Scrollbar */
@@ -90,10 +110,10 @@ body::after {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D9FF00;
+  background: #3B82F6; /* Electric Blue */
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #AACC00;
+  background: #60A5FA; /* Lighter Electric Blue */
 }

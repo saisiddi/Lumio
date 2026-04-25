@@ -28,7 +28,7 @@ export function AuthForm({ type, onSuccess }: { type: "login" | "signup", onSucc
             type="text" 
             required 
             suppressHydrationWarning
-            className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-blue/50 focus:border-brand-blue/50 transition-all placeholder:text-zinc-600"
+            className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-electric/50 focus:border-brand-electric/50 transition-all placeholder:text-zinc-600"
             placeholder="John Doe"
           />
         </div>
@@ -39,7 +39,7 @@ export function AuthForm({ type, onSuccess }: { type: "login" | "signup", onSucc
           type="email" 
           required 
           suppressHydrationWarning
-          className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-blue/50 focus:border-brand-blue/50 transition-all placeholder:text-zinc-600"
+          className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-electric/50 focus:border-brand-electric/50 transition-all placeholder:text-zinc-600"
           placeholder="name@company.com"
         />
       </div>
@@ -47,14 +47,14 @@ export function AuthForm({ type, onSuccess }: { type: "login" | "signup", onSucc
         <div className="flex items-center justify-between">
           <label className="text-sm font-medium text-zinc-300">Password</label>
           {type === "login" && (
-            <a href="#" className="text-xs text-brand-blue hover:text-white transition-colors">Forgot password?</a>
+            <a href="#" className="text-xs text-brand-electric hover:text-white transition-colors">Forgot password?</a>
           )}
         </div>
         <input 
           type="password" 
           required 
           suppressHydrationWarning
-          className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-blue/50 focus:border-brand-blue/50 transition-all placeholder:text-zinc-600"
+          className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-electric/50 focus:border-brand-electric/50 transition-all placeholder:text-zinc-600"
           placeholder="••••••••"
         />
       </div>

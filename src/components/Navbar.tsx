@@ -14,7 +14,6 @@ export function Navbar() {
   
   const links = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
   ];
 
   if (!isLoggedIn) {
@@ -34,7 +33,7 @@ export function Navbar() {
             <Activity className="w-5 h-5 text-[#00E5FF]" />
           </div>
           <span className="text-xl font-bold tracking-wider text-white">
-            LUMION
+            LUMIO
           </span>
         </Link>
 

@@ -27,7 +27,7 @@ export default function ReportPage() {
   const minorIssues = mockReportData.issues.filter(i => i.severity === "minor");
 
   return (
-    <div className="min-h-screen bg-brand-black pb-24">
+    <div className="min-h-screen bg-brand-midnight pb-24">
       <div className="max-w-6xl mx-auto px-6 py-12 space-y-16">
         {/* Header & Score */}
         <motion.div
@@ -64,7 +64,7 @@ export default function ReportPage() {
                 className="space-y-6"
               >
                 <h2 className="text-2xl font-semibold flex items-center gap-3 text-white tracking-tight">
-                  <span className="w-2.5 h-2.5 rounded-full bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.8)]" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-status-error shadow-[0_0_10px_rgba(239,68,68,0.8)]" />
                   Critical Issues <span className="text-zinc-500 font-normal">({criticalIssues.length})</span>
                 </h2>
                 <div className="space-y-4">
@@ -83,7 +83,7 @@ export default function ReportPage() {
                 className="space-y-6"
               >
                 <h2 className="text-2xl font-semibold flex items-center gap-3 text-white tracking-tight">
-                  <span className="w-2.5 h-2.5 rounded-full bg-yellow-500 shadow-[0_0_10px_rgba(234,179,8,0.8)]" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-status-warning shadow-[0_0_10px_rgba(245,158,11,0.8)]" />
                   Moderate Issues <span className="text-zinc-500 font-normal">({moderateIssues.length})</span>
                 </h2>
                 <div className="space-y-4">
@@ -102,7 +102,7 @@ export default function ReportPage() {
                 className="space-y-6"
               >
                 <h2 className="text-2xl font-semibold flex items-center gap-3 text-white tracking-tight">
-                  <span className="w-2.5 h-2.5 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.8)]" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-brand-electric shadow-[0_0_10px_rgba(59,130,246,0.8)]" />
                   Minor Issues <span className="text-zinc-500 font-normal">({minorIssues.length})</span>
                 </h2>
                 <div className="space-y-4">
@@ -131,7 +131,7 @@ export default function ReportPage() {
               className="glass-card rounded-3xl p-8 text-center space-y-6"
             >
               <div className="w-16 h-16 rounded-full bg-white/[0.02] border border-white/10 flex items-center justify-center mx-auto mb-4">
-                <RefreshCw className="w-6 h-6 text-brand-blue" />
+                <RefreshCw className="w-6 h-6 text-brand-electric" />
               </div>
               <h3 className="text-xl font-semibold tracking-tight">Fixed everything?</h3>
               <p className="text-sm text-zinc-400 font-light leading-relaxed">

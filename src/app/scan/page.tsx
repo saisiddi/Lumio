@@ -45,7 +45,7 @@ export default function ScanPage() {
   }, [router]);
 
   return (
-    <div className="min-h-screen bg-brand-black flex flex-col items-center justify-center p-6 space-y-16">
+    <div className="min-h-screen bg-brand-midnight flex flex-col items-center justify-center p-6 space-y-16">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ export default function ScanPage() {
         className="flex flex-col items-center justify-center space-y-8 w-full max-w-md mx-auto"
       >
         <div className="relative w-40 h-40 flex items-center justify-center">
-          <svg className="w-full h-full transform -rotate-90 drop-shadow-[0_0_15px_rgba(0,229,255,0.3)]" viewBox="0 0 100 100">
+          <svg className="w-full h-full transform -rotate-90 drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]" viewBox="0 0 100 100">
             <circle
               className="text-white/5 stroke-current"
               strokeWidth="2"
@@ -85,7 +85,7 @@ export default function ScanPage() {
               fill="transparent"
             />
             <motion.circle
-              className="text-brand-blue stroke-current"
+              className="text-brand-electric stroke-current"
               strokeWidth="2"
               strokeLinecap="round"
               cx="50"
@@ -108,7 +108,7 @@ export default function ScanPage() {
           key={stepIndex}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-brand-blue font-mono text-sm uppercase tracking-[0.2em] text-glow-blue h-6"
+          className="text-brand-electric font-mono text-sm uppercase tracking-[0.2em] text-glow-electric h-6"
         >
           {scanSteps[stepIndex]}
         </motion.div>

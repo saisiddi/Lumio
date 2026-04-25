@@ -39,15 +39,15 @@ export function GlowingButton({
     >
       <div className={cn(
         "absolute -inset-0.5 rounded-lg blur opacity-60 group-hover:opacity-100 transition duration-500",
-        isBlue ? "bg-gradient-to-r from-[#00E5FF] to-blue-600" : "bg-gradient-to-r from-[#8B5CF6] to-purple-600"
+        isBlue ? "bg-gradient-to-r from-[#3B82F6] to-blue-700" : "bg-gradient-to-r from-[#8B5CF6] to-purple-700"
       )}></div>
       <div className={cn(
-        "relative px-8 py-4 bg-brand-dark rounded-lg flex items-center justify-center w-full border",
-        isBlue ? "border-[#00E5FF]/20" : "border-[#8B5CF6]/20"
+        "relative px-8 py-4 bg-brand-slate rounded-lg flex items-center justify-center w-full border",
+        isBlue ? "border-[#3B82F6]/30" : "border-[#8B5CF6]/30"
       )}>
         <span className={cn(
           "font-semibold text-white tracking-wide transition duration-200",
-          isBlue ? "group-hover:text-glow-blue" : "group-hover:text-glow-violet"
+          isBlue ? "group-hover:text-glow-electric" : "group-hover:text-glow-violet"
         )}>
           {children}
         </span>

@@ -103,6 +103,8 @@ export function LiquidRevealFlow({ disableHover = false }: { disableHover?: bool
       return;
     }
 
+    let isUnmounted = false;
+
     const compileShader = (type: number, source: string) => {
       const shader = gl.createShader(type)!;
       gl.shaderSource(shader, source);
@@ -150,6 +152,7 @@ export function LiquidRevealFlow({ disableHover = false }: { disableHover?: bool
       
       const img = new Image();
       img.onload = () => {
+        if (isUnmounted) return;
         gl.activeTexture(gl.TEXTURE0 + index);
         gl.bindTexture(gl.TEXTURE_2D, tex);
         gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img);
@@ -208,6 +211,7 @@ export function LiquidRevealFlow({ disableHover = false }: { disableHover?: bool
     animationFrame = requestAnimationFrame(render);
 
     return () => {
+      isUnmounted = true;
       cancelAnimationFrame(animationFrame);
       gl.deleteProgram(program);
       gl.deleteShader(vs);
@@ -237,7 +241,7 @@ export function LiquidRevealFlow({ disableHover = false }: { disableHover?: bool
   return (
     <div 
       ref={containerRef}
-      className="relative w-full max-w-6xl mx-auto aspect-video rounded-3xl overflow-hidden shadow-[0_20px_100px_rgba(0,0,0,0.8)] border border-white/10 group cursor-crosshair bg-brand-black z-30"
+      className="relative w-full max-w-6xl mx-auto aspect-video rounded-3xl overflow-hidden shadow-[0_20px_100px_rgba(0,0,0,0.8)] border border-white/10 group cursor-crosshair bg-brand-midnight z-30"
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -251,9 +255,9 @@ export function LiquidRevealFlow({ disableHover = false }: { disableHover?: bool
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="absolute top-6 left-1/2 -translate-x-1/2 bg-brand-black/90 text-brand-neon px-6 py-2 rounded-full text-xs font-bold tracking-[0.2em] flex items-center gap-3 backdrop-blur-md z-30 pointer-events-none border border-brand-neon/30 shadow-[0_0_20px_rgba(217,255,0,0.2)]"
+          className="absolute top-6 left-1/2 -translate-x-1/2 bg-brand-midnight/90 text-brand-electric px-6 py-2 rounded-full text-xs font-bold tracking-[0.2em] flex items-center gap-3 backdrop-blur-md z-30 pointer-events-none border border-brand-electric/30 shadow-[0_0_20px_rgba(59,130,246,0.2)]"
         >
-          <div className="w-2 h-2 rounded-full bg-brand-neon animate-pulse" />
+          <div className="w-2 h-2 rounded-full bg-brand-electric animate-pulse" />
           HOVER TO FLOW
         </motion.div>
       )}
