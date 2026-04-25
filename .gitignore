@@ -9,3 +9,5 @@ build/
 __pycache__/
 .DS_Store
 .vscode/
+backend/scan_history.json
+prompt.txt
