@@ -12,7 +12,6 @@ const cardBase = {
 
 function App() {
   const [url, setUrl] = useState("");
-  const [repoPath, setRepoPath] = useState("");
   const [maxPages, setMaxPages] = useState(3);
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState(null);
@@ -30,7 +29,6 @@ function App() {
     try {
       const response = await axios.post(`${API_BASE_URL}/scan`, {
         url: url.trim(),
-        repo_path: repoPath.trim() || null,
         max_pages: Number(maxPages),
       });
       setResult(response.data);
@@ -68,15 +66,6 @@ function App() {
               value={url}
               onChange={(event) => setUrl(event.target.value)}
               placeholder="https://example.com"
-              style={styles.input}
-            />
-
-            <label style={styles.label}>Local Repo Path (optional)</label>
-            <input
-              type="text"
-              value={repoPath}
-              onChange={(event) => setRepoPath(event.target.value)}
-              placeholder="D:\\MySite"
               style={styles.input}
             />
 

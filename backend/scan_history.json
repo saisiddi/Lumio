@@ -99,6 +99,18 @@
       ],
       "new_issues": 0,
       "resolved_issues": 0
+    },
+    {
+      "scan_time": "2026-04-25T13:00:17.179089+00:00",
+      "total_violations": 4,
+      "signatures": [
+        "https://www.google.com/::html-has-lang::html",
+        "https://www.google.com/::landmark-one-main::html",
+        "https://www.google.com/::page-has-heading-one::html",
+        "https://www.google.com/::region::body > div:nth-child(1) > div"
+      ],
+      "new_issues": 0,
+      "resolved_issues": 0
     }
   ]
 }
