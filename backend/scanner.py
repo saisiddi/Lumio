@@ -5,6 +5,7 @@ from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 from playwright.sync_api import sync_playwright
 
 AXE_CDN_URL = "https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.7.2/axe.min.js"
+PLAYWRIGHT_TIMEOUT_MS = 60000
 
 
 def _validate_url(url: str) -> None:
@@ -21,8 +22,10 @@ def scan_website(url: str) -> dict[str, list[dict[str, Any]]]:
         browser = playwright.chromium.launch(headless=True)
         try:
             page = browser.new_page()
+            page.set_default_timeout(PLAYWRIGHT_TIMEOUT_MS)
+            page.set_default_navigation_timeout(PLAYWRIGHT_TIMEOUT_MS)
             try:
-                page.goto(url, wait_until="load", timeout=60000)
+                page.goto(url, wait_until="load", timeout=PLAYWRIGHT_TIMEOUT_MS)
             except PlaywrightTimeoutError as exc:
                 raise RuntimeError("Timed out while opening URL") from exc
 
@@ -46,8 +49,10 @@ def scan_page_title(url: str) -> str:
         browser = playwright.chromium.launch(headless=True)
         try:
             page = browser.new_page()
+            page.set_default_timeout(PLAYWRIGHT_TIMEOUT_MS)
+            page.set_default_navigation_timeout(PLAYWRIGHT_TIMEOUT_MS)
             try:
-                page.goto(url, wait_until="domcontentloaded", timeout=60000)
+                page.goto(url, wait_until="domcontentloaded", timeout=PLAYWRIGHT_TIMEOUT_MS)
             except PlaywrightTimeoutError as exc:
                 raise RuntimeError("Timed out while opening URL") from exc
             return page.title()
