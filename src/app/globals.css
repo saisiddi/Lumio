@@ -1,83 +1,93 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-black: #050505;
-  --color-brand-navy: #0A0A0A;
-  --color-brand-neon: #D9FF00; /* Lando Neon Yellow */
-  --color-brand-blue: #00E5FF;
+  --color-brand-black: #0b1220;
+  --color-brand-navy: #111a2e;
+  --color-brand-dark: #162036;
+  --color-brand-neon: #f0bf4c;
+  --color-brand-blue: #4fb0c6;
+  --color-brand-violet: #c97b4a;
   --color-background: var(--color-brand-black);
-  --color-foreground: #FFFFFF;
-  
+  --color-foreground: #e8edf5;
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 :root {
-  --background: #050505;
-  --foreground: #FFFFFF;
+  --background: #0b1220;
+  --foreground: #e8edf5;
 }
 
 body {
-  background-color: var(--background);
+  background:
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(79, 176, 198, 0.16) 0%,
+      transparent 36%
+    ),
+    radial-gradient(
+      circle at 85% 8%,
+      rgba(201, 123, 74, 0.14) 0%,
+      transparent 35%
+    ),
+    linear-gradient(180deg, #0b1220 0%, #0f1a2f 100%);
   color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), "Segoe UI", Helvetica, sans-serif;
   overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Viewport Frame - Lando Style Glow */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 100;
-  box-shadow: inset 0 0 100px rgba(0, 229, 255, 0.05), inset 0 0 20px rgba(0, 229, 255, 0.1);
-  border: 4px solid rgba(255, 255, 255, 0.02);
-}
-
 /* Typography styles */
 @utility text-stroke-neon {
-  -webkit-text-stroke: 1px rgba(217, 255, 0, 0.3);
+  -webkit-text-stroke: 1px rgba(240, 191, 76, 0.34);
   color: transparent;
 }
 
 @utility text-stroke-white {
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+  -webkit-text-stroke: 1px rgba(232, 237, 245, 0.2);
   color: transparent;
 }
 
 /* Advanced Premium Glassmorphism utilities */
 @utility glass {
-  background: rgba(10, 10, 10, 0.5);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(17, 26, 46, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(148, 163, 184, 0.22);
 }
 
 @utility glass-card {
-  background: linear-gradient(180deg, rgba(20,20,20,0.4) 0%, rgba(5,5,5,0.6) 100%);
-  backdrop-filter: blur(32px);
-  -webkit-backdrop-filter: blur(32px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.8), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  background: linear-gradient(
+    180deg,
+    rgba(19, 30, 52, 0.82) 0%,
+    rgba(13, 22, 40, 0.9) 100%
+  );
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  box-shadow:
+    0 14px 50px -20px rgba(2, 6, 23, 0.92),
+    inset 0 1px 0 0 rgba(248, 250, 252, 0.04);
 }
 
 @utility text-glow-neon {
-  text-shadow: 0 0 20px rgba(217, 255, 0, 0.6), 0 0 40px rgba(217, 255, 0, 0.2);
+  text-shadow: 0 0 12px rgba(240, 191, 76, 0.35);
 }
 
 @utility text-glow-blue {
-  text-shadow: 0 0 20px rgba(0, 229, 255, 0.6), 0 0 40px rgba(0, 229, 255, 0.2);
+  text-shadow: 0 0 12px rgba(79, 176, 198, 0.35);
 }
 
 @utility text-glow-violet {
-  text-shadow: 0 0 20px rgba(139, 92, 246, 0.6), 0 0 40px rgba(139, 92, 246, 0.2);
+  text-shadow: 0 0 12px rgba(201, 123, 74, 0.35);
 }
 
 @utility box-glow-blue {
-  box-shadow: 0 0 20px rgba(0, 229, 255, 0.3), 0 0 60px rgba(0, 229, 255, 0.1);
+  box-shadow:
+    0 0 16px rgba(79, 176, 198, 0.24),
+    0 0 42px rgba(79, 176, 198, 0.1);
 }
 
 /* Scrollbar */
@@ -86,14 +96,14 @@ body::after {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--background);
+  background: #0f172a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D9FF00;
+  background: #4fb0c6;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #AACC00;
+  background: #4299ad;
 }
