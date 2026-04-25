@@ -10,16 +10,39 @@ from prompt_builder import build_explainer_prompt
 
 load_dotenv()
 
-DEEPSEEK_ENDPOINT = "https://api.deepseek.com/v1/chat/completions"
+NVIDIA_ENDPOINT = "https://integrate.api.nvidia.com/v1/chat/completions"
 OPENROUTER_ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
-DEEPSEEK_MODEL = "deepseek-v4-pro"
-GEMMA_MODEL = "google/gemma-4-26b-a4b-it:free"
-REQUEST_TIMEOUT_SECONDS = 10
+NVIDIA_MODEL = "deepseek-ai/deepseek-v4-pro"
+OPENROUTER_MODEL = "google/gemma-4-26b-a4b-it:free"
+REQUEST_TIMEOUT_SECONDS = 20
 
 FALLBACK_RESULT: dict[str, str] = {
     "explanation": "This element does not meet accessibility standards and may not be usable by assistive technologies.",
     "impact": "Users relying on screen readers or assistive tools may not be able to understand or interact with this element.",
     "fixed_html": "<!-- Fix could not be generated automatically -->",
+}
+
+RULE_BASED_FALLBACKS: dict[str, dict[str, str]] = {
+    "html-has-lang": {
+        "explanation": "The page is missing a language declaration on the html element, so assistive tools cannot reliably choose the right pronunciation rules.",
+        "impact": "Screen reader users, blind users, and multilingual users may hear text announced with the wrong language settings, making content harder to understand.",
+        "fixed_html": '<html lang="en">',
+    },
+    "landmark-one-main": {
+        "explanation": "The page does not expose a main landmark, so users cannot quickly jump to the primary content area.",
+        "impact": "Screen reader users and keyboard users lose a common shortcut for skipping repeated navigation and reaching the main content faster.",
+        "fixed_html": "<main>\n  <!-- Primary page content -->\n</main>",
+    },
+    "page-has-heading-one": {
+        "explanation": "The page is missing a top-level heading, which makes it harder to understand the main purpose of the page.",
+        "impact": "Screen reader users and users with cognitive disabilities may struggle to orient themselves because there is no clear first heading that summarizes the page.",
+        "fixed_html": "<h1>Page title</h1>",
+    },
+    "region": {
+        "explanation": "Some visible content is not wrapped in a landmark region, so assistive technologies cannot expose it as part of the page structure.",
+        "impact": "Screen reader users and keyboard users may have trouble navigating the page efficiently because this section is not grouped under a meaningful landmark.",
+        "fixed_html": "<section aria-label=\"Content section\">\n  <!-- Section content -->\n</section>",
+    },
 }
 
 
@@ -90,29 +113,52 @@ def _normalize_result(data: dict[str, Any]) -> dict[str, str]:
     }
 
 
-def call_deepseek(prompt: str) -> str:
-    api_key = os.getenv("DEEPSEEK_API_KEY")
-    if not api_key:
-        raise RuntimeError("DEEPSEEK_API_KEY is not set")
+def get_rule_based_fallback(violation_id: str) -> dict[str, str]:
+    return dict(RULE_BASED_FALLBACKS.get(violation_id, FALLBACK_RESULT))
 
+
+def _post_chat_completion(
+    *,
+    endpoint: str,
+    api_key: str,
+    model: str,
+    prompt: str,
+    extra_headers: dict[str, str] | None = None,
+) -> str:
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json",
     }
+    if extra_headers:
+        headers.update(extra_headers)
+
     payload = {
-        "model": DEEPSEEK_MODEL,
+        "model": model,
         "messages": [{"role": "user", "content": prompt}],
         "temperature": 0.2,
     }
 
     response = requests.post(
-        DEEPSEEK_ENDPOINT,
+        endpoint,
         headers=headers,
         json=payload,
         timeout=REQUEST_TIMEOUT_SECONDS,
     )
     response.raise_for_status()
     return _extract_content(response.json())
+
+
+def call_nvidia(prompt: str) -> str:
+    api_key = os.getenv("NVIDIA_API_KEY")
+    if not api_key:
+        raise RuntimeError("NVIDIA_API_KEY is not set")
+
+    return _post_chat_completion(
+        endpoint=NVIDIA_ENDPOINT,
+        api_key=api_key,
+        model=NVIDIA_MODEL,
+        prompt=prompt,
+    )
 
 
 def call_gemma(prompt: str) -> str:
@@ -120,28 +166,16 @@ def call_gemma(prompt: str) -> str:
     if not api_key:
         raise RuntimeError("OPENROUTER_API_KEY is not set")
 
-    headers = {
-        "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json",
-    }
-    payload = {
-        "model": GEMMA_MODEL,
-        "messages": [{"role": "user", "content": prompt}],
-        "temperature": 0.2,
-    }
-
-    response = requests.post(
-        OPENROUTER_ENDPOINT,
-        headers=headers,
-        json=payload,
-        timeout=REQUEST_TIMEOUT_SECONDS,
+    return _post_chat_completion(
+        endpoint=OPENROUTER_ENDPOINT,
+        api_key=api_key,
+        model=OPENROUTER_MODEL,
+        prompt=prompt,
     )
-    response.raise_for_status()
-    return _extract_content(response.json())
 
 
 def get_ai_fix(prompt: str) -> dict[str, str]:
-    providers = (("DeepSeek", call_deepseek), ("Gemma", call_gemma))
+    providers = (("NVIDIA DeepSeek", call_nvidia), ("OpenRouter Gemma", call_gemma))
     for provider_name, provider in providers:
         try:
             print(f"Using {provider_name}...")
