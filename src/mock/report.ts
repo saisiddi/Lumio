@@ -45,18 +45,15 @@ export const mockReportData: ReportData = {
       description: "Multiple <img> tags are missing the 'alt' attribute.",
       suggestedFix: "Add descriptive 'alt' attributes to all images, or use alt=\"\" for decorative images.",
       codeSnippet: {
-        current: "<img src=\"/hero-banner.jpg\" class=\"w-full\" />",
+        current: '<img src="/hero-banner.jpg" class="w-full" />',
+        fixed: '<img src="/hero-banner.jpg" alt="Smiling team working in office" class="w-full" />',
+      },
       file: "src/components/HeroSection.tsx",
       lineNumber: 47,
       elementDescription: "Hero banner image on landing page",
       wcagRule: "WCAG 2.1 Level A - 1.1.1 Non-text Content",
       affectedUsers: 1250,
       businessPriority: "critical",
-      codeSnippet: {
-        current: '<img src="/hero-banner.jpg" class="w-full" />',
-        fixed:
-          '<img src="/hero-banner.jpg" alt="Smiling team working in office" class="w-full" />',
-      },
     },
     {
       id: "i2",
@@ -150,4 +147,6 @@ export const mockReportData: ReportData = {
   aiSuggestions: [
     "I noticed you have 3 images missing alt text on the landing page. Quick fix: these are all above-the-fold, so they're high priority for your users.",
     "Your primary button's color contrast fails at 3.2:1 — I've generated a patch that gets you to 5.1:1 without changing your design.",
-    "Consider grouping your 8 focus indicator issues into one CSS utility — I can generate a Tailwind config update that fixes all of them at once
+    "Consider grouping your 8 focus indicator issues into one CSS utility — I can generate a Tailwind config update that fixes all of them at once"
+  ]
+};

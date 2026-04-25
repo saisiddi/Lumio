@@ -6,14 +6,18 @@ import { motion } from "framer-motion";
 import { Search, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export function URLAnalyzerInput({ className }: { className?: string }) {
+export function URLAnalyzerInput({ className, onScan }: { className?: string, onScan?: (url: string) => void }) {
   const [url, setUrl] = useState("");
   const router = useRouter();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (url.trim()) {
-      router.push(`/scan?url=${encodeURIComponent(url)}`);
+      if (onScan) {
+        onScan(url);
+      } else {
+        router.push(`/scan?url=${encodeURIComponent(url)}`);
+      }
     }
   };
 
