@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+<<<<<<< HEAD
   --color-brand-midnight: #0A0A0B;
   --color-brand-graphite: #121418;
   --color-brand-slate: #1A1D24;
@@ -16,24 +17,52 @@
   --color-background: var(--color-brand-midnight);
   --color-foreground: var(--color-text-pure);
   
+=======
+  --color-brand-black: #0b1220;
+  --color-brand-navy: #111a2e;
+  --color-brand-dark: #162036;
+  --color-brand-neon: #f0bf4c;
+  --color-brand-blue: #4fb0c6;
+  --color-brand-violet: #c97b4a;
+  --color-background: var(--color-brand-black);
+  --color-foreground: #e8edf5;
+
+>>>>>>> 39524d9b3c8798c463ee2d848a8bd7c33c6f9e72
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 :root {
+<<<<<<< HEAD
   --background: #0A0A0B;
   --foreground: #F8FAFC;
+=======
+  --background: #0b1220;
+  --foreground: #e8edf5;
+>>>>>>> 39524d9b3c8798c463ee2d848a8bd7c33c6f9e72
 }
 
 body {
-  background-color: var(--background);
+  background:
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(79, 176, 198, 0.16) 0%,
+      transparent 36%
+    ),
+    radial-gradient(
+      circle at 85% 8%,
+      rgba(201, 123, 74, 0.14) 0%,
+      transparent 35%
+    ),
+    linear-gradient(180deg, #0b1220 0%, #0f1a2f 100%);
   color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), "Segoe UI", Helvetica, sans-serif;
   overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+<<<<<<< HEAD
 /* Viewport Frame - Subtle Electric Glow */
 body::after {
   content: "";
@@ -60,16 +89,26 @@ body.hero-white-active nav {
 /* Typography styles */
 @utility text-stroke-electric {
   -webkit-text-stroke: 1px rgba(59, 130, 246, 0.3);
+=======
+/* Typography styles */
+@utility text-stroke-neon {
+  -webkit-text-stroke: 1px rgba(240, 191, 76, 0.34);
+>>>>>>> 39524d9b3c8798c463ee2d848a8bd7c33c6f9e72
   color: transparent;
 }
 
 @utility text-stroke-white {
+<<<<<<< HEAD
   -webkit-text-stroke: 1px rgba(248, 250, 252, 0.1);
+=======
+  -webkit-text-stroke: 1px rgba(232, 237, 245, 0.2);
+>>>>>>> 39524d9b3c8798c463ee2d848a8bd7c33c6f9e72
   color: transparent;
 }
 
 /* Advanced Premium Glassmorphism utilities */
 @utility glass {
+<<<<<<< HEAD
   background: rgba(26, 29, 36, 0.5); /* Deep Slate */
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
@@ -98,6 +137,44 @@ body.hero-white-active nav {
 
 @utility box-glow-violet {
   box-shadow: 0 0 20px rgba(139, 92, 246, 0.2), 0 0 60px rgba(139, 92, 246, 0.05);
+=======
+  background: rgba(17, 26, 46, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+@utility glass-card {
+  background: linear-gradient(
+    180deg,
+    rgba(19, 30, 52, 0.82) 0%,
+    rgba(13, 22, 40, 0.9) 100%
+  );
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  box-shadow:
+    0 14px 50px -20px rgba(2, 6, 23, 0.92),
+    inset 0 1px 0 0 rgba(248, 250, 252, 0.04);
+}
+
+@utility text-glow-neon {
+  text-shadow: 0 0 12px rgba(240, 191, 76, 0.35);
+}
+
+@utility text-glow-blue {
+  text-shadow: 0 0 12px rgba(79, 176, 198, 0.35);
+}
+
+@utility text-glow-violet {
+  text-shadow: 0 0 12px rgba(201, 123, 74, 0.35);
+}
+
+@utility box-glow-blue {
+  box-shadow:
+    0 0 16px rgba(79, 176, 198, 0.24),
+    0 0 42px rgba(79, 176, 198, 0.1);
+>>>>>>> 39524d9b3c8798c463ee2d848a8bd7c33c6f9e72
 }
 
 /* Scrollbar */
@@ -106,14 +183,22 @@ body.hero-white-active nav {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--background);
+  background: #0f172a;
 }
 
 ::-webkit-scrollbar-thumb {
+<<<<<<< HEAD
   background: #3B82F6; /* Electric Blue */
+=======
+  background: #4fb0c6;
+>>>>>>> 39524d9b3c8798c463ee2d848a8bd7c33c6f9e72
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
+<<<<<<< HEAD
   background: #60A5FA; /* Lighter Electric Blue */
+=======
+  background: #4299ad;
+>>>>>>> 39524d9b3c8798c463ee2d848a8bd7c33c6f9e72
 }
