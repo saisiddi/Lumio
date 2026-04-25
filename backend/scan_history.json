@@ -1,30 +1,6 @@
 {
   "https://www.google.com/": [
     {
-      "scan_time": "2026-04-25T11:54:19.676369+00:00",
-      "total_violations": 4,
-      "signatures": [
-        "https://www.google.com/::html-has-lang::html",
-        "https://www.google.com/::landmark-one-main::html",
-        "https://www.google.com/::page-has-heading-one::html",
-        "https://www.google.com/::region::body > div:nth-child(1) > div"
-      ],
-      "new_issues": 4,
-      "resolved_issues": 0
-    },
-    {
-      "scan_time": "2026-04-25T12:09:26.127791+00:00",
-      "total_violations": 4,
-      "signatures": [
-        "https://www.google.com/::html-has-lang::html",
-        "https://www.google.com/::landmark-one-main::html",
-        "https://www.google.com/::page-has-heading-one::html",
-        "https://www.google.com/::region::body > div:nth-child(1) > div"
-      ],
-      "new_issues": 0,
-      "resolved_issues": 0
-    },
-    {
       "scan_time": "2026-04-25T12:18:40.792793+00:00",
       "total_violations": 12,
       "signatures": [
@@ -110,6 +86,85 @@
         "https://www.google.com/::region::body > div:nth-child(1) > div"
       ],
       "new_issues": 0,
+      "resolved_issues": 0
+    },
+    {
+      "scan_time": "2026-04-25T15:29:53.237507+00:00",
+      "total_violations": 12,
+      "signatures": [
+        "https://www.google.com/::html-has-lang::html",
+        "https://www.google.com/::landmark-one-main::html",
+        "https://www.google.com/::page-has-heading-one::html",
+        "https://www.google.com/::region::body > div:nth-child(1) > div",
+        "https://www.google.com/policies/terms/::landmark-one-main::html",
+        "https://www.google.com/policies/terms/::landmark-unique::.gb_a > div > .oTqstd > div[role=\"navigation\"]",
+        "https://www.google.com/policies/terms/::list::.xXnO1d:nth-child(3) > .nrAB0c > ul",
+        "https://www.google.com/policies/terms/::region::.xXnO1d:nth-child(1) > .nrAB0c > .m2dIJf.w94E5e",
+        "https://www.google.com/policies/terms/privacy::aria-allowed-attr::#logo",
+        "https://www.google.com/policies/terms/privacy::landmark-one-main::html",
+        "https://www.google.com/policies/terms/privacy::page-has-heading-one::html",
+        "https://www.google.com/policies/terms/privacy::region::a"
+      ],
+      "new_issues": 8,
+      "resolved_issues": 0
+    },
+    {
+      "scan_time": "2026-04-25T15:39:37.657880+00:00",
+      "total_violations": 4,
+      "signatures": [
+        "https://www.google.com/::html-has-lang::html",
+        "https://www.google.com/::landmark-one-main::html",
+        "https://www.google.com/::page-has-heading-one::html",
+        "https://www.google.com/::region::body > div:nth-child(1) > div"
+      ],
+      "new_issues": 0,
+      "resolved_issues": 8
+    },
+    {
+      "scan_time": "2026-04-25T16:01:09.756204+00:00",
+      "total_violations": 4,
+      "signatures": [
+        "https://www.google.com/::html-has-lang::html",
+        "https://www.google.com/::landmark-one-main::html",
+        "https://www.google.com/::page-has-heading-one::html",
+        "https://www.google.com/::region::body > div:nth-child(1) > div"
+      ],
+      "new_issues": 0,
+      "resolved_issues": 0
+    },
+    {
+      "scan_time": "2026-04-25T16:29:10.666399+00:00",
+      "total_violations": 4,
+      "signatures": [
+        "https://www.google.com/::html-has-lang::html",
+        "https://www.google.com/::landmark-one-main::html",
+        "https://www.google.com/::page-has-heading-one::html",
+        "https://www.google.com/::region::body > div:nth-child(1) > div"
+      ],
+      "new_issues": 0,
+      "resolved_issues": 0
+    }
+  ],
+  "https://nadakacheri.karnataka.gov.in/ajsk": [
+    {
+      "scan_time": "2026-04-25T16:31:26.753262+00:00",
+      "total_violations": 13,
+      "signatures": [
+        "https://nadakacheri.karnataka.gov.in/ajsk::color-contrast::label[for=\"NSApplicationRaised\"]",
+        "https://nadakacheri.karnataka.gov.in/ajsk::duplicate-id-active::.nav-item:nth-child(3) > .dropdown > .dropdown-menu.transDrop[aria-labelledby=\"dropdownMenuLink\"] > .dropdown-item:nth-child(2) > a[target=\"_blank\"]",
+        "https://nadakacheri.karnataka.gov.in/ajsk::duplicate-id-aria::.nav-item:nth-child(3)",
+        "https://nadakacheri.karnataka.gov.in/ajsk::duplicate-id::.nav-item:nth-child(4) > .dropdown > .dropdown-menu.transDrop[aria-labelledby=\"dropdownMenuLink\"] > .dropdown-item:nth-child(6) > a[target=\"_blank\"]",
+        "https://nadakacheri.karnataka.gov.in/ajsk::empty-table-header::th:nth-child(1)",
+        "https://nadakacheri.karnataka.gov.in/ajsk::html-has-lang::html",
+        "https://nadakacheri.karnataka.gov.in/ajsk::image-alt::.bhoomi",
+        "https://nadakacheri.karnataka.gov.in/ajsk::landmark-one-main::html",
+        "https://nadakacheri.karnataka.gov.in/ajsk::landmark-unique::.navbar-expand-lg.navbar.navbar-dark:nth-child(5)",
+        "https://nadakacheri.karnataka.gov.in/ajsk::link-name::form > a[href$=\"karnataka.gov.in/\"]",
+        "https://nadakacheri.karnataka.gov.in/ajsk::marquee::marquee",
+        "https://nadakacheri.karnataka.gov.in/ajsk::page-has-heading-one::html",
+        "https://nadakacheri.karnataka.gov.in/ajsk::region::.container-fluid > .row:nth-child(1)"
+      ],
+      "new_issues": 13,
       "resolved_issues": 0
     }
   ]
