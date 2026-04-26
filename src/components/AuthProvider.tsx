@@ -14,27 +14,36 @@ const AuthContext = createContext<{
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const authStatus = localStorage.getItem("isLoggedIn");
-    if (authStatus === "true") {
-      setIsLoggedIn(true);
+    try {
+      const authStatus = localStorage.getItem("isLoggedIn");
+      if (authStatus === "true") {
+        setIsLoggedIn(true);
+      }
+    } catch (error) {
+      // If storage is unavailable (privacy mode/policy), default to logged out.
+      console.warn("Auth storage unavailable, continuing as logged out.", error);
     }
-    setIsLoading(false);
   }, []);
 
   const login = () => {
-    localStorage.setItem("isLoggedIn", "true");
+    try {
+      localStorage.setItem("isLoggedIn", "true");
+    } catch (error) {
+      console.warn("Could not persist login state.", error);
+    }
     setIsLoggedIn(true);
   };
 
   const logout = () => {
-    localStorage.removeItem("isLoggedIn");
+    try {
+      localStorage.removeItem("isLoggedIn");
+    } catch (error) {
+      console.warn("Could not clear login state.", error);
+    }
     setIsLoggedIn(false);
   };
-
-  if (isLoading) return null; // Prevent hydration flash
 
   return (
     <AuthContext.Provider value={{ isLoggedIn, login, logout }}>

@@ -132,6 +132,10 @@ export function HeroSection() {
 
   // Cleanup on unmount
   useEffect(() => {
+    // Ensure reload/navigation starts at the opening hero frame instead of a
+    // restored mid-scroll state where animated layers can be fully transparent.
+    window.scrollTo({ top: 0, behavior: "auto" });
+
     return () => {
       document.body.classList.remove("hero-white-active");
     };
