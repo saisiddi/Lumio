@@ -1669,3 +1669,1928 @@ RAW: {
 }
 PARSED: {'explanation': 'The span element has no ARIA role, so aria-label is not allowed on it. A span without a role cannot have an accessible name via aria-label.', 'impact': "Screen reader users may not hear the accessible name 'Google' announced because aria-label is invalid on a generic span without a role.", 'fixed_html': '<span id="logo" role="img" aria-label="Google"></span>'}
 INFO:     127.0.0.1:56247 - "POST /scan HTTP/1.1" 200 OK
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: html-has-lang
+Description: Ensures every HTML document has a lang attribute
+Impact: serious
+Element: <html>
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: landmark-one-main
+Description: Ensures the document has a main landmark
+Impact: moderate
+Element: <html>
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: page-has-heading-one
+Description: Ensure that the page, or at least one of its frames contains a level-one heading
+Impact: moderate
+Element: <html>
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: region
+Description: Ensures all page content is contained by landmarks
+Impact: moderate
+Element: <div style="font-size:13px;">
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: 429 Client Error: Too Many Requests for url: https://integrate.api.nvidia.com/v1/chat/completions
+RAW: {
+  "explanation": "The <html> element is missing the required lang attribute, which tells browsers and assistive technologies what language the page content is written in.",
+  "impact": "Screen reader users may hear the page pronounced incorrectly because the assistive technology cannot determine the correct language profile to use for pronunciation and braille translation.",
+  "fixed_html": "<html lang=\"en\">"
+}
+PARSED: {'explanation': 'The <html> element is missing the required lang attribute, which tells browsers and assistive technologies what language the page content is written in.', 'impact': 'Screen reader users may hear the page pronounced incorrectly because the assistive technology cannot determine the correct language profile to use for pronunciation and braille translation.', 'fixed_html': '<html lang="en">'}
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+INFO:     127.0.0.1:53959 - "POST /scan HTTP/1.1" 200 OK
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: html-has-lang
+Description: Ensures every HTML document has a lang attribute
+Impact: serious
+Element: <html>
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: landmark-one-main
+Description: Ensures the document has a main landmark
+Impact: moderate
+Element: <html>
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: page-has-heading-one
+Description: Ensure that the page, or at least one of its frames contains a level-one heading
+Impact: moderate
+Element: <html>
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: region
+Description: Ensures all page content is contained by landmarks
+Impact: moderate
+Element: <div style="font-size:13px;">
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+INFO:     127.0.0.1:65356 - "POST /scan HTTP/1.1" 200 OK
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: html-has-lang
+Description: Ensures every HTML document has a lang attribute
+Impact: serious
+Element: <html>
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: landmark-one-main
+Description: Ensures the document has a main landmark
+Impact: moderate
+Element: <html>
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: page-has-heading-one
+Description: Ensure that the page, or at least one of its frames contains a level-one heading
+Impact: moderate
+Element: <html>
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: region
+Description: Ensures all page content is contained by landmarks
+Impact: moderate
+Element: <div style="font-size:13px;">
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: landmark-one-main
+Description: Ensures the document has a main landmark
+Impact: moderate
+Element: <html lang="en-US" dir="ltr">
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+Using NVIDIA DeepSeek...
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+RAW: {
+  "explanation": "The page is missing a <main> landmark element, which helps users quickly find the primary content.",
+  "impact": "Screen reader users and keyboard-only users cannot easily skip to the main content, forcing them to navigate through all page elements.",
+  "fixed_html": "<html>\n<head>\n  <title>Page Title</title>\n</head>\n<body>\n  <main>\n    <!-- Primary content goes here -->\n  </main>\n</body>\n</html>"
+}
+PARSED: {'explanation': 'The page is missing a <main> landmark element, which helps users quickly find the primary content.', 'impact': 'Screen reader users and keyboard-only users cannot easily skip to the main content, forcing them to navigate through all page elements.', 'fixed_html': '<html>\n<head>\n  <title>Page Title</title>\n</head>\n<body>\n  <main>\n    <!-- Primary content goes here -->\n  </main>\n</body>\n</html>'}
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+- If a button or link has no accessible label, infer its purpose from context and provide a clear, action-oriented label.
+
+Violation:
+ID: landmark-unique
+Description: Landmarks should have a unique role or role/label/title (i.e. accessible name) combination
+Impact: moderate
+Element: <div role="navigation">
+
+Using OpenRouter Gemma...
+RAW: {
+  "explanation": "This div contains content that is not inside a landmark region like <main>, <nav>, or <aside>, making it harder to find.",
+  "impact": "Screen reader users cannot quickly navigate to this content using landmark shortcuts, forcing them to tab through the entire page.",
+  "fixed_html": "<div role=\"region\" aria-label=\"Content section\" style=\"font-size:13px;\">"
+}
+PARSED: {'explanation': 'This div contains content that is not inside a landmark region like <main>, <nav>, or <aside>, making it harder to find.', 'impact': 'Screen reader users cannot quickly navigate to this content using landmark shortcuts, forcing them to tab through the entire page.', 'fixed_html': '<div role="region" aria-label="Content section" style="font-size:13px;">'}
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: list
+Description: Ensures that lists are structured correctly
+Impact: serious
+Element: <ul>
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+RAW: {
+  "explanation": "The <html> element is missing the required lang attribute, which tells browsers and assistive technologies what language the page content is written in.",
+  "impact": "Screen reader users may hear the content pronounced incorrectly because the screen reader cannot determine the correct language profile to use for pronunciation.",
+  "fixed_html": "<html lang=\"en\">"
+}
+PARSED: {'explanation': 'The <html> element is missing the required lang attribute, which tells browsers and assistive technologies what language the page content is written in.', 'impact': 'Screen reader users may hear the content pronounced incorrectly because the screen reader cannot determine the correct language profile to use for pronunciation.', 'fixed_html': '<html lang="en">'}
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: region
+Description: Ensures all page content is contained by landmarks
+Impact: moderate
+Element: <div class="w94E5e m2dIJf"><img class="I9WKse" alt="" src="https://www.gstatic.com/identity/boq/policies/privacy/tos_2024/01-introduction-lightmode.svg" data-atf="false" data-iml="646.3000000044703"></div>
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: 429 Client Error: Too Many Requests for url: https://integrate.api.nvidia.com/v1/chat/completions
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: aria-allowed-attr
+Description: Ensures ARIA attributes are allowed for an element's role
+Impact: serious
+Element: <span id="logo" aria-label="Google"></span>
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: landmark-one-main
+Description: Ensures the document has a main landmark
+Impact: moderate
+Element: <html lang="en">
+
+Using OpenRouter Gemma...
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: page-has-heading-one
+Description: Ensure that the page, or at least one of its frames contains a level-one heading
+Impact: moderate
+Element: <html lang="en">
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: 429 Client Error: Too Many Requests for url: https://integrate.api.nvidia.com/v1/chat/completions
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: region
+Description: Ensures all page content is contained by landmarks
+Impact: moderate
+Element: <a href="//www.google.com/"><span id="logo" aria-label="Google"></span></a>
+
+Using OpenRouter Gemma...
+NVIDIA DeepSeek parse/call error: 429 Client Error: Too Many Requests for url: https://integrate.api.nvidia.com/v1/chat/completions
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: 429 Client Error: Too Many Requests for url: https://integrate.api.nvidia.com/v1/chat/completions
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+INFO:     127.0.0.1:50276 - "POST /scan HTTP/1.1" 200 OK
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: html-has-lang
+Description: Ensures every HTML document has a lang attribute
+Impact: serious
+Element: <html>
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: landmark-one-main
+Description: Ensures the document has a main landmark
+Impact: moderate
+Element: <html>
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: page-has-heading-one
+Description: Ensure that the page, or at least one of its frames contains a level-one heading
+Impact: moderate
+Element: <html>
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: region
+Description: Ensures all page content is contained by landmarks
+Impact: moderate
+Element: <div style="font-size:13px;">
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: landmark-one-main
+Description: Ensures the document has a main landmark
+Impact: moderate
+Element: <html lang="en-US" dir="ltr">
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+Using NVIDIA DeepSeek...
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: 429 Client Error: Too Many Requests for url: https://integrate.api.nvidia.com/v1/chat/completions
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+- If a button or link has no accessible label, infer its purpose from context and provide a clear, action-oriented label.
+
+Violation:
+ID: landmark-unique
+Description: Landmarks should have a unique role or role/label/title (i.e. accessible name) combination
+Impact: moderate
+Element: <div role="navigation">
+
+Using OpenRouter Gemma...
+NVIDIA DeepSeek parse/call error: 429 Client Error: Too Many Requests for url: https://integrate.api.nvidia.com/v1/chat/completions
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: list
+Description: Ensures that lists are structured correctly
+Impact: serious
+Element: <ul>
+
+Using OpenRouter Gemma...
+NVIDIA DeepSeek parse/call error: 429 Client Error: Too Many Requests for url: https://integrate.api.nvidia.com/v1/chat/completions
+NVIDIA DeepSeek parse/call error: 429 Client Error: Too Many Requests for url: https://integrate.api.nvidia.com/v1/chat/completions
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: region
+Description: Ensures all page content is contained by landmarks
+Impact: moderate
+Element: <div class="w94E5e m2dIJf"><img class="I9WKse" alt="" src="https://www.gstatic.com/identity/boq/policies/privacy/tos_2024/01-introduction-lightmode.svg" data-atf="false" data-iml="812.7000000029802"></div>
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: aria-allowed-attr
+Description: Ensures ARIA attributes are allowed for an element's role
+Impact: serious
+Element: <span id="logo" aria-label="Google"></span>
+
+Using OpenRouter Gemma...
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: 429 Client Error: Too Many Requests for url: https://integrate.api.nvidia.com/v1/chat/completions
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: landmark-one-main
+Description: Ensures the document has a main landmark
+Impact: moderate
+Element: <html lang="en">
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: page-has-heading-one
+Description: Ensure that the page, or at least one of its frames contains a level-one heading
+Impact: moderate
+Element: <html lang="en">
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: 429 Client Error: Too Many Requests for url: https://integrate.api.nvidia.com/v1/chat/completions
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: region
+Description: Ensures all page content is contained by landmarks
+Impact: moderate
+Element: <a href="//www.google.com/"><span id="logo" aria-label="Google"></span></a>
+
+Using OpenRouter Gemma...
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: 429 Client Error: Too Many Requests for url: https://integrate.api.nvidia.com/v1/chat/completions
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+INFO:     127.0.0.1:51565 - "POST /scan HTTP/1.1" 200 OK
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: empty-heading
+Description: Ensures headings have discernible text
+Impact: minor
+Element: <h4 class="hds-heading book-of-the-week__book-title hds-heading--md"></h4>
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: empty-heading
+Description: Ensures headings have discernible text
+Impact: minor
+Element: <h4 class="hds-heading book-of-the-week__book-title hds-heading--md"></h4>
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+INFO:     127.0.0.1:49672 - "POST /scan HTTP/1.1" 200 OK
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: empty-heading
+Description: Ensures headings have discernible text
+Impact: minor
+Element: <h4 class="hds-heading book-of-the-week__book-title hds-heading--md"></h4>
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+INFO:     127.0.0.1:60145 - "POST /scan HTTP/1.1" 200 OK
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+- If a button or link has no accessible label, infer its purpose from context and provide a clear, action-oriented label.
+
+Violation:
+ID: aria-command-name
+Description: Ensures every ARIA button, link and menuitem has an accessible name
+Impact: serious
+Element: <div class="fhzfs0e atm_mk_h2mmj6 atm_9j_tlke0l atm_5j_1vi7ecw atm_e2_1osqo2v atm_vy_1osqo2v atm_9s_1txwivl atm_h_1h6ojuz atm_fc_1yb4nlp atm_kd_glywfm atm_70_1owajc2_1w3cfyq atm_92_1yyfdc7_vmtskl atm_mk_stnw88_vmtskl atm_tk_1ssbidh_vmtskl atm_tr_1i34xl8_vmtskl atm_fq_myb0kj_vmtskl atm_vy_54a6mi_vmtskl atm_e2_1vi7ecw_vmtskl atm_2d_1j28jx2_vmtskl atm_wq_1mrwo0b_vmtskl atm_mj_glywfm_vmtskl atm_92_1yyfdc7_9in345 atm_mk_stnw88_9in345 atm_tk_idpfg4_9in345 atm_vy_u0ciey_9in345 atm_e2_1osqo2v_9in345 atm_26_1j28jx2_9in345 atm_5j_1vi7ecw_9in345 atm_wq_1mrwo0b_9in345 atm_mj_glywfm_9in345 dir dir-ltr" role="button" tabindex="0" aria-expanded="false" style="grid-column:center">
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: region
+Description: Ensures all page content is contained by landmarks
+Impact: moderate
+Element: <h1 class="vsvqdle atm_3f_idpfg4 atm_7h_hxbz6r atm_7i_ysn8ba atm_e2_t94yts atm_ks_zryt35 atm_l8_idpfg4 atm_mk_stnw88 atm_vv_1q9ccgz atm_vy_t94yts dir dir-ltr">Airbnb homepage</h1>
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+INFO:     127.0.0.1:57109 - "POST /scan HTTP/1.1" 200 OK
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: html-has-lang
+Description: Ensures every HTML document has a lang attribute
+Impact: serious
+Element: <html>
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: landmark-one-main
+Description: Ensures the document has a main landmark
+Impact: moderate
+Element: <html>
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: page-has-heading-one
+Description: Ensure that the page, or at least one of its frames contains a level-one heading
+Impact: moderate
+Element: <html>
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: region
+Description: Ensures all page content is contained by landmarks
+Impact: moderate
+Element: <div style="font-size:13px;">
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+INFO:     127.0.0.1:60387 - "POST /scan HTTP/1.1" 200 OK
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+- If a button or link has no accessible label, infer its purpose from context and provide a clear, action-oriented label.
+
+Violation:
+ID: aria-command-name
+Description: Ensures every ARIA button, link and menuitem has an accessible name
+Impact: serious
+Element: <div class="fhzfs0e atm_mk_h2mmj6 atm_9j_tlke0l atm_5j_1vi7ecw atm_e2_1osqo2v atm_vy_1osqo2v atm_9s_1txwivl atm_h_1h6ojuz atm_fc_1yb4nlp atm_kd_glywfm atm_70_1owajc2_1w3cfyq atm_92_1yyfdc7_vmtskl atm_mk_stnw88_vmtskl atm_tk_1ssbidh_vmtskl atm_tr_1i34xl8_vmtskl atm_fq_myb0kj_vmtskl atm_vy_54a6mi_vmtskl atm_e2_1vi7ecw_vmtskl atm_2d_1j28jx2_vmtskl atm_wq_1mrwo0b_vmtskl atm_mj_glywfm_vmtskl atm_92_1yyfdc7_9in345 atm_mk_stnw88_9in345 atm_tk_idpfg4_9in345 atm_vy_u0ciey_9in345 atm_e2_1osqo2v_9in345 atm_26_1j28jx2_9in345 atm_5j_1vi7ecw_9in345 atm_wq_1mrwo0b_9in345 atm_mj_glywfm_9in345 dir dir-ltr" role="button" tabindex="0" aria-expanded="false" style="grid-column:center">
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: region
+Description: Ensures all page content is contained by landmarks
+Impact: moderate
+Element: <h1 class="vsvqdle atm_3f_idpfg4 atm_7h_hxbz6r atm_7i_ysn8ba atm_e2_t94yts atm_ks_zryt35 atm_l8_idpfg4 atm_mk_stnw88 atm_vv_1q9ccgz atm_vy_t94yts dir dir-ltr">Airbnb homepage</h1>
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+INFO:     127.0.0.1:63734 - "POST /scan HTTP/1.1" 200 OK
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: heading-order
+Description: Ensures the order of headings is semantically correct
+Impact: moderate
+Element: <h3 class="css-kjimjp">FULL HORSEPOWER</h3>
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: meta-viewport
+Description: Ensures <meta name="viewport"> does not disable text scaling and zooming
+Impact: critical
+Element: <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: region
+Description: Ensures all page content is contained by landmarks
+Impact: moderate
+Element: <a href="/help-center">Help</a>
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+INFO:     127.0.0.1:61108 - "POST /scan HTTP/1.1" 200 OK
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: heading-order
+Description: Ensures the order of headings is semantically correct
+Impact: moderate
+Element: <h3 class="css-kjimjp">FULL HORSEPOWER</h3>
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: meta-viewport
+Description: Ensures <meta name="viewport"> does not disable text scaling and zooming
+Impact: critical
+Element: <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: region
+Description: Ensures all page content is contained by landmarks
+Impact: moderate
+Element: <a href="/help-center">Help</a>
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+INFO:     127.0.0.1:53421 - "POST /scan HTTP/1.1" 200 OK
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: heading-order
+Description: Ensures the order of headings is semantically correct
+Impact: moderate
+Element: <h3 class="css-kjimjp">FULL HORSEPOWER</h3>
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: meta-viewport
+Description: Ensures <meta name="viewport"> does not disable text scaling and zooming
+Impact: critical
+Element: <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: region
+Description: Ensures all page content is contained by landmarks
+Impact: moderate
+Element: <a href="/help-center">Help</a>
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+INFO:     127.0.0.1:60572 - "POST /scan HTTP/1.1" 200 OK
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: heading-order
+Description: Ensures the order of headings is semantically correct
+Impact: moderate
+Element: <h3 class="css-kjimjp">FULL HORSEPOWER</h3>
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: meta-viewport
+Description: Ensures <meta name="viewport"> does not disable text scaling and zooming
+Impact: critical
+Element: <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+Using OpenRouter Gemma...
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: region
+Description: Ensures all page content is contained by landmarks
+Impact: moderate
+Element: <a href="/help-center">Help</a>
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+INFO:     127.0.0.1:55615 - "POST /scan HTTP/1.1" 200 OK
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: empty-heading
+Description: Ensures headings have discernible text
+Impact: minor
+Element: <h4 class="hds-heading book-of-the-week__book-title hds-heading--md"></h4>
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+INFO:     127.0.0.1:61739 - "POST /scan HTTP/1.1" 200 OK
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: empty-heading
+Description: Ensures headings have discernible text
+Impact: minor
+Element: <h4 class="hds-heading book-of-the-week__book-title hds-heading--md"></h4>
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+INFO:     127.0.0.1:56837 - "POST /scan HTTP/1.1" 200 OK
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: empty-heading
+Description: Ensures headings have discernible text
+Impact: minor
+Element: <h4 class="hds-heading book-of-the-week__book-title hds-heading--md"></h4>
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+INFO:     127.0.0.1:64919 - "POST /scan HTTP/1.1" 200 OK
+PROMPT SENT: You are an accessibility expert.
+
+Return ONLY valid JSON. No markdown. No explanations outside JSON.
+
+Strict format:
+{
+"explanation": "Explain clearly in simple English what is wrong (max 2 sentences).",
+"impact": "Explain who is affected and how (must mention users like blind users, screen reader users, etc).",
+"fixed_html": "Return ONLY the corrected version of the given element."
+}
+
+Rules:
+- Do NOT return anything outside JSON
+- Do NOT include backticks
+- Do NOT explain JSON
+- Keep explanation simple and human readable
+- Impact MUST mention affected users explicitly
+- Do NOT repeat the input text verbatim in explanation
+- Be specific and concrete, not generic
+- Keep response natural and human
+
+
+Violation:
+ID: empty-heading
+Description: Ensures headings have discernible text
+Impact: minor
+Element: <h4 class="hds-heading book-of-the-week__book-title hds-heading--md"></h4>
+
+Using OpenRouter Gemma...
+OpenRouter Gemma parse/call error: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+Using NVIDIA DeepSeek...
+NVIDIA DeepSeek parse/call error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=20)
+INFO:     127.0.0.1:55467 - "POST /scan HTTP/1.1" 200 OK

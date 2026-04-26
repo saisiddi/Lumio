@@ -8,6 +8,8 @@ import { AuthProvider } from "@/components/AuthProvider";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const space = Space_Grotesk({ subsets: ["latin"], variable: "--font-mono" });
 
+import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
+
 export const metadata: Metadata = {
   title: "Lumio | AI-Powered Accessibility Auditor",
   description:
@@ -29,11 +31,13 @@ export default function RootLayout({
         className="antialiased min-h-screen flex flex-col"
         suppressHydrationWarning
       >
-        <AuthProvider>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </AuthProvider>
+        <SmoothScrollProvider>
+          <AuthProvider>
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </AuthProvider>
+        </SmoothScrollProvider>
       </body>
     </html>
   );

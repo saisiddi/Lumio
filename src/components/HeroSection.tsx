@@ -11,6 +11,7 @@ import {
 import { URLAnalyzerInput } from "./URLAnalyzerInput";
 import { LiquidRevealFlow } from "./LiquidReveal";
 import { PuzzleAnalysis } from "./PuzzleAnalysis";
+import { ParticleNetwork } from "./ParticleNetwork";
 import { ScanCharts } from "./ScanCharts";
 import { generateAccessibilityPDF } from "@/lib/generatePDF";
 import {
@@ -27,12 +28,16 @@ import {
   Check,
   AlertTriangle,
   Wrench,
+  Home,
+  RefreshCw,
+  ArrowUp,
 } from "lucide-react";
 
 export function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isShatterDisabled, setIsShatterDisabled] = useState(false);
   const [isSearchInteractive, setIsSearchInteractive] = useState(false);
+  const [particleColorProgress, setParticleColorProgress] = useState(0);
 
   const [isScanning, setIsScanning] = useState(false);
   const [scanComplete, setScanComplete] = useState(false);
@@ -42,6 +47,20 @@ export function HeroSection() {
   const [scanError, setScanError] = useState<string | null>(null);
   const [expandedIssues, setExpandedIssues] = useState<Set<number>>(new Set([0]));
   const [copiedIdx, setCopiedIdx] = useState<number | null>(null);
+  const resultsContainerRef = useRef<HTMLDivElement>(null);
+
+  const handleRescan = () => {
+    setScanComplete(false);
+    setIsScanning(false);
+    setProgress(0);
+    setReportData(null);
+    setScannedUrl("");
+    setScanError(null);
+  };
+
+  const scrollToTop = () => {
+    resultsContainerRef.current?.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const toggleIssue = (idx: number) => {
     setExpandedIssues(prev => {
@@ -166,6 +185,10 @@ export function HeroSection() {
       document.body.classList.remove("hero-white-active");
     }
 
+    // Particle color: white→black as background goes white
+    const pColor = Math.min(1, Math.max(0, (latest - 0.55) / 0.2));
+    setParticleColorProgress(pColor);
+
     if (latest > 0.82 && !isSearchInteractive) {
       setIsSearchInteractive(true);
     } else if (latest <= 0.82 && isSearchInteractive) {
@@ -279,7 +302,7 @@ export function HeroSection() {
           scale: scaleCenterpiece,
           opacity: opacityCenterpiece,
           y: yCenterpiece,
-          zIndex: 2,
+          zIndex: 95,
         }}
       >
         <LiquidRevealFlow disableHover={isShatterDisabled} />
@@ -288,7 +311,7 @@ export function HeroSection() {
       {/* === LUMIO Text zoom === */}
       <div
         className="fixed inset-0 flex items-center justify-center overflow-hidden pointer-events-none"
-        style={{ zIndex: 3 }}
+        style={{ zIndex: 96 }}
       >
         <motion.h1
           style={{ scale: scaleLumio, opacity: opacityLumio, y: yLumio }}
@@ -298,24 +321,44 @@ export function HeroSection() {
         </motion.h1>
       </div>
 
-      {/* === WHITE OVERLAY — uses zIndex: 90 to cover EVERYTHING including navbar (z-50) === */}
+      {/* === WHITE OVERLAY === */}
       <motion.div
         style={{ opacity: opacityWhiteBg, zIndex: 90 }}
         className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_20%_15%,rgba(47,114,235,0.1)_0%,transparent_40%),radial-gradient(circle_at_82%_12%,rgba(54,167,196,0.1)_0%,transparent_38%),linear-gradient(180deg,#f7faff_0%,#eaf1fb_100%)]"
       />
 
-      {/* === Search box + cards — on top of white at zIndex: 100 === */}
+      {/* === Particle Network — now always visible but interactive logic moved to prop === */}
+      <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 91 }}>
+        <ParticleNetwork 
+          colorProgress={particleColorProgress} 
+          disableMouseInteraction={isScanning || scanComplete}
+        />
+      </div>
+
+      {/* === Search box + cards === */}
       <div
         className="fixed inset-0 flex items-start justify-center px-4 md:px-8 pt-8 pointer-events-none"
         style={{ zIndex: 100 }}
       >
         <motion.div
+          ref={resultsContainerRef}
           style={{ y: ySearch, opacity: opacitySearch }}
+          data-lenis-prevent
           className={`w-full max-w-7xl space-y-8 ${isSearchInteractive ? "pointer-events-auto" : "pointer-events-none"} ${isScanning || scanComplete ? "max-h-[96vh] overflow-y-auto pb-16 pt-4 pr-1 scrollbar-hide" : "flex flex-col items-center justify-center min-h-[80vh]"}`}
         >
           {/* Header card — hidden during scanning/results to avoid overlapping the puzzle */}
           {!isScanning && !scanComplete && (
             <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-8 md:p-10 shadow-[0_20px_60px_rgba(15,23,42,0.12)] border border-slate-200/60">
+              {/* Home button */}
+              <div className="flex justify-start mb-4">
+                <button
+                  onClick={() => window.location.reload()}
+                  className="flex items-center gap-1.5 text-xs text-slate-500 hover:text-brand-electric transition-colors group"
+                >
+                  <Home className="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform" />
+                  Back to Home
+                </button>
+              </div>
               <div className="space-y-4 text-center max-w-3xl mx-auto">
                 <p className="text-[11px] uppercase tracking-[0.25em] font-semibold text-brand-electric">
                   AI Accessibility Intelligence
@@ -379,17 +422,14 @@ export function HeroSection() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.5 }}
-                  className="w-full flex flex-col items-center gap-3"
+                  className="w-full flex flex-col items-center gap-8"
                 >
-                  <p className="text-xs md:text-sm text-slate-600 text-center">
-                    Captured URL for scan request:{" "}
-                    <span className="font-semibold text-slate-800">
-                      {scannedUrl}
-                    </span>
-                  </p>
                   <div className="w-full max-w-4xl">
                     <PuzzleAnalysis progress={progress} />
                   </div>
+                  <p className="text-xs md:text-sm text-slate-500 text-center animate-pulse">
+                    Analyzing: <span className="font-semibold text-brand-electric break-all">{scannedUrl}</span>
+                  </p>
                 </motion.div>
               )}
 
@@ -424,12 +464,20 @@ export function HeroSection() {
                         Not generic advice. Exportable as PDF report.
                       </p>
                     </div>
-                    <button
-                      onClick={() => generateAccessibilityPDF(reportData, scannedUrl)}
-                      className="whitespace-nowrap px-4 py-2 flex items-center gap-2 bg-brand-midnight hover:bg-slate-800 text-white rounded-lg text-sm font-semibold transition-colors shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
-                    >
-                      <FileText className="w-4 h-4" /> Export PDF Report
-                    </button>
+                    <div className="flex flex-col sm:flex-row gap-2">
+                      <button
+                        onClick={handleRescan}
+                        className="whitespace-nowrap px-4 py-2 flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-sm font-semibold transition-all border border-slate-200"
+                      >
+                        <RefreshCw className="w-4 h-4" /> New Scan
+                      </button>
+                      <button
+                        onClick={() => generateAccessibilityPDF(reportData, scannedUrl)}
+                        className="whitespace-nowrap px-4 py-2 flex items-center gap-2 bg-brand-midnight hover:bg-slate-800 text-white rounded-lg text-sm font-semibold transition-colors shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
+                      >
+                        <FileText className="w-4 h-4" /> Export PDF Report
+                      </button>
+                    </div>
                   </div>
 
                   {/* Score Overview */}
@@ -651,6 +699,16 @@ export function HeroSection() {
           </div>
         </motion.div>
       </div>
+      {/* Floating Scroll to Top Button */}
+      {scanComplete && (
+        <button
+          onClick={() => window.location.reload()}
+          className="fixed bottom-8 right-8 z-[120] p-4 bg-brand-midnight text-white rounded-full shadow-2xl hover:bg-brand-electric hover:scale-110 active:scale-95 transition-all group"
+          title="Back to Landing Page"
+        >
+          <ArrowUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform" />
+        </button>
+      )}
     </section>
   );
 }

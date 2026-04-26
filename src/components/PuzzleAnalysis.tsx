@@ -92,7 +92,7 @@ export function PuzzleAnalysis({ progress }: { progress: number }) {
 
   return (
     <div
-      className={`relative w-full max-w-4xl aspect-[4/3] md:aspect-video mx-auto bg-brand-midnight rounded-3xl overflow-hidden shadow-[0_0_100px_rgba(0,0,0,1)] border transition-all duration-1000 flex items-center justify-center ${progress === 100 ? "border-brand-electric/50 shadow-[0_0_80px_rgba(59,130,246,0.1)]" : "border-white/5"}`}
+      className={`relative w-full max-w-4xl aspect-[4/3] md:aspect-video mx-auto bg-brand-midnight rounded-[3rem] overflow-hidden shadow-[0_0_100px_rgba(0,0,0,1)] border transition-all duration-1000 flex items-center justify-center ${progress === 100 ? "border-brand-electric/50 shadow-[0_0_80px_rgba(59,130,246,0.1)]" : "border-white/5"}`}
     >
       {/* Dynamic Circuitry Background */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">

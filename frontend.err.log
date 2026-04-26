@@ -59,3 +59,1733 @@ https://react.dev/link/hydration-mismatch
 [browser] Encountered two children with the same key, `region`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
 [browser] Encountered two children with the same key, `page-has-heading-one`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
 [browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Encountered two children with the same key, `landmark-one-main`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+    at Set.forEach (<anonymous>) (<anonymous>)
+[browser] Encountered two children with the same key, `region`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+    at Set.forEach (<anonymous>) (<anonymous>)
+[browser] Encountered two children with the same key, `landmark-one-main`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+    at Set.forEach (<anonymous>) (<anonymous>)
+[browser] Encountered two children with the same key, `region`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+    at Set.forEach (<anonymous>) (<anonymous>)
+[browser] Encountered two children with the same key, `page-has-heading-one`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+    at Set.forEach (<anonymous>) (<anonymous>)
+[browser] Encountered two children with the same key, `landmark-one-main`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `region`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `landmark-one-main`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `region`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `page-has-heading-one`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `landmark-one-main`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `region`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `landmark-one-main`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `region`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `page-has-heading-one`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `landmark-one-main`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+    at Set.forEach (<anonymous>) (<anonymous>)
+[browser] Encountered two children with the same key, `region`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+    at Set.forEach (<anonymous>) (<anonymous>)
+[browser] Encountered two children with the same key, `landmark-one-main`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+    at Set.forEach (<anonymous>) (<anonymous>)
+[browser] Encountered two children with the same key, `region`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+    at Set.forEach (<anonymous>) (<anonymous>)
+[browser] Encountered two children with the same key, `page-has-heading-one`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+    at Set.forEach (<anonymous>) (<anonymous>)
+[browser] Encountered two children with the same key, `landmark-one-main`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `region`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `landmark-one-main`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `region`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `page-has-heading-one`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (file://E:/bugbash/.next/dev/static/chunks/node_modules_0-uoh20._.js:413:191)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+⨯ ./src/components/HeroSection.tsx:663:5
+Expression expected
+  [90m661 |[0m         </motion.div>
+  [90m662 |[0m       </div>
+[31m[1m>[0m [90m663 |[0m     </section>
+  [90m    |[0m     [31m[1m^[0m
+  [90m664 |[0m   );
+  [90m665 |[0m }
+  [90m666 |[0m
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/components/HeroSection.tsx:310:7
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  [90m308 |[0m
+  [90m309 |[0m       {[90m/* === WHITE OVERLAY — uses zIndex: 90 to cover EVERYTHING including navbar (z-50)...[0m
+[31m[1m>[0m [90m310 |[0m       >
+  [90m    |[0m       [31m[1m^[0m
+  [90m311 |[0m         <motion.div
+  [90m312 |[0m           style={{ y: ySearch, opacity: opacitySearch }}
+  [90m313 |[0m           className={[32m`w-full max-w-7xl space-y-8 [0m${isSearchInteractive ? [32m"pointer-events-...[0m
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/components/HeroSection.tsx:663:6
+Unterminated regexp literal
+  [90m661 |[0m         </motion.div>
+  [90m662 |[0m       </div>
+[31m[1m>[0m [90m663 |[0m     </section>
+  [90m    |[0m      [31m[1m^^^^^^^^^[0m
+  [90m664 |[0m   );
+  [90m665 |[0m }
+  [90m666 |[0m
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+⨯ ./src/components/HeroSection.tsx:663:5
+Expression expected
+  [90m661 |[0m         </motion.div>
+  [90m662 |[0m       </div>
+[31m[1m>[0m [90m663 |[0m     </section>
+  [90m    |[0m     [31m[1m^[0m
+  [90m664 |[0m   );
+  [90m665 |[0m }
+  [90m666 |[0m
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/components/HeroSection.tsx:310:7
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  [90m308 |[0m
+  [90m309 |[0m       {[90m/* === WHITE OVERLAY — uses zIndex: 90 to cover EVERYTHING including navbar (z-50)...[0m
+[31m[1m>[0m [90m310 |[0m       >
+  [90m    |[0m       [31m[1m^[0m
+  [90m311 |[0m         <motion.div
+  [90m312 |[0m           style={{ y: ySearch, opacity: opacitySearch }}
+  [90m313 |[0m           className={[32m`w-full max-w-7xl space-y-8 [0m${isSearchInteractive ? [32m"pointer-events-...[0m
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/components/HeroSection.tsx:663:6
+Unterminated regexp literal
+  [90m661 |[0m         </motion.div>
+  [90m662 |[0m       </div>
+[31m[1m>[0m [90m663 |[0m     </section>
+  [90m    |[0m      [31m[1m^^^^^^^^^[0m
+  [90m664 |[0m   );
+  [90m665 |[0m }
+  [90m666 |[0m
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+⨯ ./src/components/HeroSection.tsx:663:5
+Expression expected
+  [90m661 |[0m         </motion.div>
+  [90m662 |[0m       </div>
+[31m[1m>[0m [90m663 |[0m     </section>
+  [90m    |[0m     [31m[1m^[0m
+  [90m664 |[0m   );
+  [90m665 |[0m }
+  [90m666 |[0m
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/components/HeroSection.tsx:310:7
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  [90m308 |[0m
+  [90m309 |[0m       {[90m/* === WHITE OVERLAY — uses zIndex: 90 to cover EVERYTHING including navbar (z-50)...[0m
+[31m[1m>[0m [90m310 |[0m       >
+  [90m    |[0m       [31m[1m^[0m
+  [90m311 |[0m         <motion.div
+  [90m312 |[0m           style={{ y: ySearch, opacity: opacitySearch }}
+  [90m313 |[0m           className={[32m`w-full max-w-7xl space-y-8 [0m${isSearchInteractive ? [32m"pointer-events-...[0m
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/components/HeroSection.tsx:663:6
+Unterminated regexp literal
+  [90m661 |[0m         </motion.div>
+  [90m662 |[0m       </div>
+[31m[1m>[0m [90m663 |[0m     </section>
+  [90m    |[0m      [31m[1m^^^^^^^^^[0m
+  [90m664 |[0m   );
+  [90m665 |[0m }
+  [90m666 |[0m
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+⨯ ./src/components/HeroSection.tsx:663:5
+Expression expected
+  [90m661 |[0m         </motion.div>
+  [90m662 |[0m       </div>
+[31m[1m>[0m [90m663 |[0m     </section>
+  [90m    |[0m     [31m[1m^[0m
+  [90m664 |[0m   );
+  [90m665 |[0m }
+  [90m666 |[0m
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/components/HeroSection.tsx:310:7
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  [90m308 |[0m
+  [90m309 |[0m       {[90m/* === WHITE OVERLAY — uses zIndex: 90 to cover EVERYTHING including navbar (z-50)...[0m
+[31m[1m>[0m [90m310 |[0m       >
+  [90m    |[0m       [31m[1m^[0m
+  [90m311 |[0m         <motion.div
+  [90m312 |[0m           style={{ y: ySearch, opacity: opacitySearch }}
+  [90m313 |[0m           className={[32m`w-full max-w-7xl space-y-8 [0m${isSearchInteractive ? [32m"pointer-events-...[0m
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/components/HeroSection.tsx:663:6
+Unterminated regexp literal
+  [90m661 |[0m         </motion.div>
+  [90m662 |[0m       </div>
+[31m[1m>[0m [90m663 |[0m     </section>
+  [90m    |[0m      [31m[1m^^^^^^^^^[0m
+  [90m664 |[0m   );
+  [90m665 |[0m }
+  [90m666 |[0m
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+[browser] Uncaught Error: ./src/components/HeroSection.tsx:663:5
+Expression expected
+  661 |         </motion.div>
+  662 |       </div>
+> 663 |     </section>
+      |     ^
+  664 |   );
+  665 | }
+  666 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/components/HeroSection.tsx:663:5)
+    at <unknown> (Error: (./src/components/HeroSection.tsx:663:5)
+[browser] Uncaught Error: ./src/components/HeroSection.tsx:663:5
+Expression expected
+  661 |         </motion.div>
+  662 |       </div>
+> 663 |     </section>
+      |     ^
+  664 |   );
+  665 | }
+  666 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/components/HeroSection.tsx:663:5)
+    at <unknown> (Error: (./src/components/HeroSection.tsx:663:5)
+⨯ ./src/components/HeroSection.tsx:305:8
+Expected '</', got '('
+  [90m303 |[0m           className=[32m"text-5xl md:text-7xl lg:text-[7rem] font-black uppercase text-white ...[0m
+  [90m304 |[0m
+[31m[1m>[0m [90m305 |[0m     [36mif[0m (latest > [35m0.82[0m && !isSearchInteractive) {
+  [90m    |[0m        [31m[1m^[0m
+  [90m306 |[0m       setIsSearchInteractive([36mtrue[0m);
+  [90m307 |[0m     } [36melse[0m [36mif[0m (latest <= [35m0.82[0m && isSearchInteractive) {
+  [90m308 |[0m       setIsSearchInteractive([36mfalse[0m);
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+⨯ ./src/components/HeroSection.tsx:305:8
+Expected '</', got '('
+  [90m303 |[0m           className=[32m"text-5xl md:text-7xl lg:text-[7rem] font-black uppercase text-white ...[0m
+  [90m304 |[0m
+[31m[1m>[0m [90m305 |[0m     [36mif[0m (latest > [35m0.82[0m && !isSearchInteractive) {
+  [90m    |[0m        [31m[1m^[0m
+  [90m306 |[0m       setIsSearchInteractive([36mtrue[0m);
+  [90m307 |[0m     } [36melse[0m [36mif[0m (latest <= [35m0.82[0m && isSearchInteractive) {
+  [90m308 |[0m       setIsSearchInteractive([36mfalse[0m);
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+[browser] Uncaught Error: ./src/components/HeroSection.tsx:305:8
+Expected '</', got '('
+  303 |           className="text-5xl md:text-7xl lg:text-[7rem] font-black uppercase text-white ...
+  304 |
+> 305 |     if (latest > 0.82 && !isSearchInteractive) {
+      |        ^
+  306 |       setIsSearchInteractive(true);
+  307 |     } else if (latest <= 0.82 && isSearchInteractive) {
+  308 |       setIsSearchInteractive(false);
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/components/HeroSection.tsx:305:8)
+    at <unknown> (Error: (./src/components/HeroSection.tsx:305:8)
+[browser] Uncaught Error: ./src/components/HeroSection.tsx:305:8
+Expected '</', got '('
+  303 |           className="text-5xl md:text-7xl lg:text-[7rem] font-black uppercase text-white ...
+  304 |
+> 305 |     if (latest > 0.82 && !isSearchInteractive) {
+      |        ^
+  306 |       setIsSearchInteractive(true);
+  307 |     } else if (latest <= 0.82 && isSearchInteractive) {
+  308 |       setIsSearchInteractive(false);
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/components/HeroSection.tsx:305:8)
+    at <unknown> (Error: (./src/components/HeroSection.tsx:305:8)
+⨯ ./src/components/HeroSection.tsx:298:16
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  [90m296 |[0m       {[90m/* === LUMIO Text zoom === */[0m}
+  [90m297 |[0m
+[31m[1m>[0m [90m298 |[0m     [36mif[0m (latest > [35m0.82[0m && !isSearchInteractive) {
+  [90m    |[0m                [31m[1m^[0m
+  [90m299 |[0m       setIsSearchInteractive([36mtrue[0m);
+  [90m300 |[0m     } [36melse[0m [36mif[0m (latest <= [35m0.82[0m && isSearchInteractive) {
+  [90m301 |[0m       setIsSearchInteractive([36mfalse[0m);
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+⨯ ./src/components/HeroSection.tsx:298:16
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  [90m296 |[0m       {[90m/* === LUMIO Text zoom === */[0m}
+  [90m297 |[0m
+[31m[1m>[0m [90m298 |[0m     [36mif[0m (latest > [35m0.82[0m && !isSearchInteractive) {
+  [90m    |[0m                [31m[1m^[0m
+  [90m299 |[0m       setIsSearchInteractive([36mtrue[0m);
+  [90m300 |[0m     } [36melse[0m [36mif[0m (latest <= [35m0.82[0m && isSearchInteractive) {
+  [90m301 |[0m       setIsSearchInteractive([36mfalse[0m);
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+[browser] Uncaught Error: ./src/components/HeroSection.tsx:298:16
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  296 |       {/* === LUMIO Text zoom === */}
+  297 |
+> 298 |     if (latest > 0.82 && !isSearchInteractive) {
+      |                ^
+  299 |       setIsSearchInteractive(true);
+  300 |     } else if (latest <= 0.82 && isSearchInteractive) {
+  301 |       setIsSearchInteractive(false);
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/components/HeroSection.tsx:298:16)
+    at <unknown> (Error: (./src/components/HeroSection.tsx:298:16)
+[browser] Uncaught Error: ./src/components/HeroSection.tsx:298:16
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  296 |       {/* === LUMIO Text zoom === */}
+  297 |
+> 298 |     if (latest > 0.82 && !isSearchInteractive) {
+      |                ^
+  299 |       setIsSearchInteractive(true);
+  300 |     } else if (latest <= 0.82 && isSearchInteractive) {
+  301 |       setIsSearchInteractive(false);
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/components/HeroSection.tsx:298:16)
+    at <unknown> (Error: (./src/components/HeroSection.tsx:298:16)
+⨯ ./src/components/HeroSection.tsx:294:16
+Expression expected
+  [90m292 |[0m       >
+  [90m293 |[0m         <[33mLiquidRevealFlow[0m disableHover={isShatterDisabled} />
+[31m[1m>[0m [90m294 |[0m       </m      <div
+  [90m    |[0m                [31m[1m^[0m
+  [90m295 |[0m         className=[32m"fixed inset-0 flex items-center justify-center overflow-hidden pointer...[0m
+  [90m296 |[0m         style={{ zIndex: [35m3[0m }}
+  [90m297 |[0m       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+⨯ ./src/components/HeroSection.tsx:294:16
+Expression expected
+  [90m292 |[0m       >
+  [90m293 |[0m         <[33mLiquidRevealFlow[0m disableHover={isShatterDisabled} />
+[31m[1m>[0m [90m294 |[0m       </m      <div
+  [90m    |[0m                [31m[1m^[0m
+  [90m295 |[0m         className=[32m"fixed inset-0 flex items-center justify-center overflow-hidden pointer...[0m
+  [90m296 |[0m         style={{ zIndex: [35m3[0m }}
+  [90m297 |[0m       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+[browser] Uncaught Error: ./src/components/HeroSection.tsx:294:16
+Expression expected
+  292 |       >
+  293 |         <LiquidRevealFlow disableHover={isShatterDisabled} />
+> 294 |       </m      <div
+      |                ^
+  295 |         className="fixed inset-0 flex items-center justify-center overflow-hidden pointer...
+  296 |         style={{ zIndex: 3 }}
+  297 |       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/components/HeroSection.tsx:294:16)
+    at <unknown> (Error: (./src/components/HeroSection.tsx:294:16)
+[browser] Uncaught Error: ./src/components/HeroSection.tsx:294:16
+Expression expected
+  292 |       >
+  293 |         <LiquidRevealFlow disableHover={isShatterDisabled} />
+> 294 |       </m      <div
+      |                ^
+  295 |         className="fixed inset-0 flex items-center justify-center overflow-hidden pointer...
+  296 |         style={{ zIndex: 3 }}
+  297 |       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/components/HeroSection.tsx:294:16)
+    at <unknown> (Error: (./src/components/HeroSection.tsx:294:16)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+⨯ ./src/components/HeroSection.tsx:366:9
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  [90m364 |[0m               </div>
+  [90m365 |[0m             </div>
+[31m[1m>[0m [90m366 |[0m           )}
+  [90m    |[0m         [31m[1m^[0m
+  [90m367 |[0m
+  [90m368 |[0m           <div className=[32m"w-full pt-4"[0m>
+  [90m369 |[0m             {scanError && (
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/components/HeroSection.tsx:399:13
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  [90m397 |[0m                   ))}
+  [90m398 |[0m                 </motion.div>
+[31m[1m>[0m [90m399 |[0m               )}
+  [90m    |[0m             [31m[1m^[0m
+  [90m400 |[0m
+  [90m401 |[0m               {isScanning && (
+  [90m402 |[0m                 <motion.div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+⨯ ./src/components/HeroSection.tsx:366:9
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  [90m364 |[0m               </div>
+  [90m365 |[0m             </div>
+[31m[1m>[0m [90m366 |[0m           )}
+  [90m    |[0m         [31m[1m^[0m
+  [90m367 |[0m
+  [90m368 |[0m           <div className=[32m"w-full pt-4"[0m>
+  [90m369 |[0m             {scanError && (
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/components/HeroSection.tsx:399:13
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  [90m397 |[0m                   ))}
+  [90m398 |[0m                 </motion.div>
+[31m[1m>[0m [90m399 |[0m               )}
+  [90m    |[0m             [31m[1m^[0m
+  [90m400 |[0m
+  [90m401 |[0m               {isScanning && (
+  [90m402 |[0m                 <motion.div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+⨯ ./src/components/HeroSection.tsx:366:9
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  [90m364 |[0m               </div>
+  [90m365 |[0m             </div>
+[31m[1m>[0m [90m366 |[0m           )}
+  [90m    |[0m         [31m[1m^[0m
+  [90m367 |[0m
+  [90m368 |[0m           <div className=[32m"w-full pt-4"[0m>
+  [90m369 |[0m             {scanError && (
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/components/HeroSection.tsx:399:13
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  [90m397 |[0m                   ))}
+  [90m398 |[0m                 </motion.div>
+[31m[1m>[0m [90m399 |[0m               )}
+  [90m    |[0m             [31m[1m^[0m
+  [90m400 |[0m
+  [90m401 |[0m               {isScanning && (
+  [90m402 |[0m                 <motion.div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+⨯ ./src/components/HeroSection.tsx:366:9
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  [90m364 |[0m               </div>
+  [90m365 |[0m             </div>
+[31m[1m>[0m [90m366 |[0m           )}
+  [90m    |[0m         [31m[1m^[0m
+  [90m367 |[0m
+  [90m368 |[0m           <div className=[32m"w-full pt-4"[0m>
+  [90m369 |[0m             {scanError && (
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/components/HeroSection.tsx:399:13
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  [90m397 |[0m                   ))}
+  [90m398 |[0m                 </motion.div>
+[31m[1m>[0m [90m399 |[0m               )}
+  [90m    |[0m             [31m[1m^[0m
+  [90m400 |[0m
+  [90m401 |[0m               {isScanning && (
+  [90m402 |[0m                 <motion.div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+[browser] Uncaught Error: ./src/components/HeroSection.tsx:399:13
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  397 |                   ))}
+  398 |                 </motion.div>
+> 399 |               )}
+      |             ^
+  400 |
+  401 |               {isScanning && (
+  402 |                 <motion.div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/components/HeroSection.tsx:399:13)
+    at <unknown> (Error: (./src/components/HeroSection.tsx:399:13)
+[browser] Uncaught Error: ./src/components/HeroSection.tsx:399:13
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  397 |                   ))}
+  398 |                 </motion.div>
+> 399 |               )}
+      |             ^
+  400 |
+  401 |               {isScanning && (
+  402 |                 <motion.div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/components/HeroSection.tsx:399:13)
+    at <unknown> (Error: (./src/components/HeroSection.tsx:399:13)
+⨯ ./src/components/HeroSection.tsx:366:9
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  [90m364 |[0m               </div>
+  [90m365 |[0m             </div>
+[31m[1m>[0m [90m366 |[0m           )}
+  [90m    |[0m         [31m[1m^[0m
+  [90m367 |[0m
+  [90m368 |[0m           <div className=[32m"w-full pt-4"[0m>
+  [90m369 |[0m             {scanError && (
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/components/HeroSection.tsx:399:13
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  [90m397 |[0m                   ))}
+  [90m398 |[0m                 </motion.div>
+[31m[1m>[0m [90m399 |[0m               )}
+  [90m    |[0m             [31m[1m^[0m
+  [90m400 |[0m
+  [90m401 |[0m               {isScanning && (
+  [90m402 |[0m                 <motion.div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+⨯ ./src/components/HeroSection.tsx:366:9
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  [90m364 |[0m               </div>
+  [90m365 |[0m             </div>
+[31m[1m>[0m [90m366 |[0m           )}
+  [90m    |[0m         [31m[1m^[0m
+  [90m367 |[0m
+  [90m368 |[0m           <div className=[32m"w-full pt-4"[0m>
+  [90m369 |[0m             {scanError && (
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/components/HeroSection.tsx:399:13
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  [90m397 |[0m                   ))}
+  [90m398 |[0m                 </motion.div>
+[31m[1m>[0m [90m399 |[0m               )}
+  [90m    |[0m             [31m[1m^[0m
+  [90m400 |[0m
+  [90m401 |[0m               {isScanning && (
+  [90m402 |[0m                 <motion.div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+⨯ ./src/components/HeroSection.tsx:366:9
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  [90m364 |[0m               </div>
+  [90m365 |[0m             </div>
+[31m[1m>[0m [90m366 |[0m           )}
+  [90m    |[0m         [31m[1m^[0m
+  [90m367 |[0m
+  [90m368 |[0m           <div className=[32m"w-full pt-4"[0m>
+  [90m369 |[0m             {scanError && (
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/components/HeroSection.tsx:399:13
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  [90m397 |[0m                   ))}
+  [90m398 |[0m                 </motion.div>
+[31m[1m>[0m [90m399 |[0m               )}
+  [90m    |[0m             [31m[1m^[0m
+  [90m400 |[0m
+  [90m401 |[0m               {isScanning && (
+  [90m402 |[0m                 <motion.div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+⨯ ./src/components/HeroSection.tsx:366:9
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  [90m364 |[0m               </div>
+  [90m365 |[0m             </div>
+[31m[1m>[0m [90m366 |[0m           )}
+  [90m    |[0m         [31m[1m^[0m
+  [90m367 |[0m
+  [90m368 |[0m           <div className=[32m"w-full pt-4"[0m>
+  [90m369 |[0m             {scanError && (
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/components/HeroSection.tsx:399:13
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  [90m397 |[0m                   ))}
+  [90m398 |[0m                 </motion.div>
+[31m[1m>[0m [90m399 |[0m               )}
+  [90m    |[0m             [31m[1m^[0m
+  [90m400 |[0m
+  [90m401 |[0m               {isScanning && (
+  [90m402 |[0m                 <motion.div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+⨯ ./src/components/HeroSection.tsx:366:9
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  [90m364 |[0m               </div>
+  [90m365 |[0m             </div>
+[31m[1m>[0m [90m366 |[0m           )}
+  [90m    |[0m         [31m[1m^[0m
+  [90m367 |[0m
+  [90m368 |[0m           <div className=[32m"w-full pt-4"[0m>
+  [90m369 |[0m             {scanError && (
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/components/HeroSection.tsx:399:13
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  [90m397 |[0m                   ))}
+  [90m398 |[0m                 </motion.div>
+[31m[1m>[0m [90m399 |[0m               )}
+  [90m    |[0m             [31m[1m^[0m
+  [90m400 |[0m
+  [90m401 |[0m               {isScanning && (
+  [90m402 |[0m                 <motion.div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+⨯ ./src/components/HeroSection.tsx:366:9
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  [90m364 |[0m               </div>
+  [90m365 |[0m             </div>
+[31m[1m>[0m [90m366 |[0m           )}
+  [90m    |[0m         [31m[1m^[0m
+  [90m367 |[0m
+  [90m368 |[0m           <div className=[32m"w-full pt-4"[0m>
+  [90m369 |[0m             {scanError && (
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/components/HeroSection.tsx:399:13
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  [90m397 |[0m                   ))}
+  [90m398 |[0m                 </motion.div>
+[31m[1m>[0m [90m399 |[0m               )}
+  [90m    |[0m             [31m[1m^[0m
+  [90m400 |[0m
+  [90m401 |[0m               {isScanning && (
+  [90m402 |[0m                 <motion.div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+[browser] Uncaught Error: ./src/components/HeroSection.tsx:399:13
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  397 |                   ))}
+  398 |                 </motion.div>
+> 399 |               )}
+      |             ^
+  400 |
+  401 |               {isScanning && (
+  402 |                 <motion.div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/components/HeroSection.tsx:399:13)
+    at <unknown> (Error: (./src/components/HeroSection.tsx:399:13)
+[browser] Uncaught Error: ./src/components/HeroSection.tsx:399:13
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  397 |                   ))}
+  398 |                 </motion.div>
+> 399 |               )}
+      |             ^
+  400 |
+  401 |               {isScanning && (
+  402 |                 <motion.div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/components/HeroSection.tsx:399:13)
+    at <unknown> (Error: (./src/components/HeroSection.tsx:399:13)
+[browser] ./src/components/HeroSection.tsx:399:13
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  397 |                   ))}
+  398 |                 </motion.div>
+> 399 |               )}
+      |             ^
+  400 |
+  401 |               {isScanning && (
+  402 |                 <motion.div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/components/HeroSection.tsx:399:13
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  397 |                   ))}
+  398 |                 </motion.div>
+> 399 |               )}
+      |             ^
+  400 |
+  401 |               {isScanning && (
+  402 |                 <motion.div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/components/HeroSection.tsx:399:13
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  397 |                   ))}
+  398 |                 </motion.div>
+> 399 |               )}
+      |             ^
+  400 |
+  401 |               {isScanning && (
+  402 |                 <motion.div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component] 
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+⨯ ./src/components/HeroSection.tsx:323:9
+Expected corresponding JSX closing tag for <section>
+  [90m321 |[0m       </div>
+  [90m322 |[0m
+[31m[1m>[0m [90m323 |[0m       </div>
+  [90m    |[0m         [31m[1m^^^[0m
+  [90m324 |[0m
+  [90m325 |[0m       {[90m/* === Search box + cards === */[0m}
+  [90m326 |[0m       <div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+⨯ ./src/components/HeroSection.tsx:323:9
+Expected corresponding JSX closing tag for <section>
+  [90m321 |[0m       </div>
+  [90m322 |[0m
+[31m[1m>[0m [90m323 |[0m       </div>
+  [90m    |[0m         [31m[1m^^^[0m
+  [90m324 |[0m
+  [90m325 |[0m       {[90m/* === Search box + cards === */[0m}
+  [90m326 |[0m       <div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+⨯ ./src/components/HeroSection.tsx:323:9
+Expected corresponding JSX closing tag for <section>
+  [90m321 |[0m       </div>
+  [90m322 |[0m
+[31m[1m>[0m [90m323 |[0m       </div>
+  [90m    |[0m         [31m[1m^^^[0m
+  [90m324 |[0m
+  [90m325 |[0m       {[90m/* === Search box + cards === */[0m}
+  [90m326 |[0m       <div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+⨯ ./src/components/HeroSection.tsx:323:9
+Expected corresponding JSX closing tag for <section>
+  [90m321 |[0m       </div>
+  [90m322 |[0m
+[31m[1m>[0m [90m323 |[0m       </div>
+  [90m    |[0m         [31m[1m^^^[0m
+  [90m324 |[0m
+  [90m325 |[0m       {[90m/* === Search box + cards === */[0m}
+  [90m326 |[0m       <div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+[browser] Uncaught Error: ./src/components/HeroSection.tsx:323:9
+Expected corresponding JSX closing tag for <section>
+  321 |       </div>
+  322 |
+> 323 |       </div>
+      |         ^^^
+  324 |
+  325 |       {/* === Search box + cards === */}
+  326 |       <div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/components/HeroSection.tsx:323:9)
+    at <unknown> (Error: (./src/components/HeroSection.tsx:323:9)
+[browser] Uncaught Error: ./src/components/HeroSection.tsx:323:9
+Expected corresponding JSX closing tag for <section>
+  321 |       </div>
+  322 |
+> 323 |       </div>
+      |         ^^^
+  324 |
+  325 |       {/* === Search box + cards === */}
+  326 |       <div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/components/HeroSection.tsx:323:9)
+    at <unknown> (Error: (./src/components/HeroSection.tsx:323:9)
+[browser] ./src/components/HeroSection.tsx:323:9
+Expected corresponding JSX closing tag for <section>
+  321 |       </div>
+  322 |
+> 323 |       </div>
+      |         ^^^
+  324 |
+  325 |       {/* === Search box + cards === */}
+  326 |       <div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/components/HeroSection.tsx:323:9
+Expected corresponding JSX closing tag for <section>
+  321 |       </div>
+  322 |
+> 323 |       </div>
+      |         ^^^
+  324 |
+  325 |       {/* === Search box + cards === */}
+  326 |       <div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/components/HeroSection.tsx:323:9
+Expected corresponding JSX closing tag for <section>
+  321 |       </div>
+  322 |
+> 323 |       </div>
+      |         ^^^
+  324 |
+  325 |       {/* === Search box + cards === */}
+  326 |       <div
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component] 
+⨯ ./src/components/HeroSection.tsx:307:16
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  [90m305 |[0m         </motion.h1>
+  [90m306 |[0m
+[31m[1m>[0m [90m307 |[0m     [36mif[0m (latest > [35m0.82[0m && !isSearchInteractive) {
+  [90m    |[0m                [31m[1m^[0m
+  [90m308 |[0m       setIsSearchInteractive([36mtrue[0m);
+  [90m309 |[0m     } [36melse[0m [36mif[0m (latest <= [35m0.82[0m && isSearchInteractive) {
+  [90m310 |[0m       setIsSearchInteractive([36mfalse[0m);
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+⨯ ./src/components/HeroSection.tsx:307:16
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  [90m305 |[0m         </motion.h1>
+  [90m306 |[0m
+[31m[1m>[0m [90m307 |[0m     [36mif[0m (latest > [35m0.82[0m && !isSearchInteractive) {
+  [90m    |[0m                [31m[1m^[0m
+  [90m308 |[0m       setIsSearchInteractive([36mtrue[0m);
+  [90m309 |[0m     } [36melse[0m [36mif[0m (latest <= [35m0.82[0m && isSearchInteractive) {
+  [90m310 |[0m       setIsSearchInteractive([36mfalse[0m);
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+[browser] Uncaught Error: ./src/components/HeroSection.tsx:307:16
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  305 |         </motion.h1>
+  306 |
+> 307 |     if (latest > 0.82 && !isSearchInteractive) {
+      |                ^
+  308 |       setIsSearchInteractive(true);
+  309 |     } else if (latest <= 0.82 && isSearchInteractive) {
+  310 |       setIsSearchInteractive(false);
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/components/HeroSection.tsx:307:16)
+    at <unknown> (Error: (./src/components/HeroSection.tsx:307:16)
+[browser] Uncaught Error: ./src/components/HeroSection.tsx:307:16
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  305 |         </motion.h1>
+  306 |
+> 307 |     if (latest > 0.82 && !isSearchInteractive) {
+      |                ^
+  308 |       setIsSearchInteractive(true);
+  309 |     } else if (latest <= 0.82 && isSearchInteractive) {
+  310 |       setIsSearchInteractive(false);
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/components/HeroSection.tsx:307:16)
+    at <unknown> (Error: (./src/components/HeroSection.tsx:307:16)
+[browser] ./src/components/HeroSection.tsx:307:16
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  305 |         </motion.h1>
+  306 |
+> 307 |     if (latest > 0.82 && !isSearchInteractive) {
+      |                ^
+  308 |       setIsSearchInteractive(true);
+  309 |     } else if (latest <= 0.82 && isSearchInteractive) {
+  310 |       setIsSearchInteractive(false);
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/components/HeroSection.tsx:307:16
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  305 |         </motion.h1>
+  306 |
+> 307 |     if (latest > 0.82 && !isSearchInteractive) {
+      |                ^
+  308 |       setIsSearchInteractive(true);
+  309 |     } else if (latest <= 0.82 && isSearchInteractive) {
+  310 |       setIsSearchInteractive(false);
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/HeroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/HeroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component] 
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (file://E:/bugbash/.next/dev/static/chunks/node_modules_118r318._.js:413:191)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)

@@ -25,17 +25,21 @@ export function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 glass border-b border-white/5"
+      className="fixed top-0 left-0 right-0 z-[110] glass border-b border-white/5"
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
+        <a
+          href="/"
+          onClick={(e) => { e.preventDefault(); window.location.reload(); }}
+          className="flex items-center gap-2 group cursor-pointer"
+        >
           <div className="relative flex items-center justify-center w-10 h-10 rounded-full bg-blue-500/10 border border-blue-500/30 group-hover:box-glow-blue transition-all duration-500">
             <Activity className="w-5 h-5 text-[#00E5FF]" />
           </div>
           <span className="text-xl font-bold tracking-wider text-white">
             LUMIO
           </span>
-        </Link>
+        </a>
 
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
