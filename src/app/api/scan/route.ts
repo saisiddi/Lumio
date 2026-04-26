@@ -53,9 +53,46 @@ export async function POST(request: Request) {
 
       const scanData = await backendResponse.json();
 
+      console.log("[API /scan] Backend returned:", {
+        url: scanData.url,
+        total_violations: scanData.total_violations,
+        violations_count: scanData.violations?.length,
+      });
+
+      const mappedIssues = (scanData.violations || []).map((v: any, index: number) => ({
+        id: v.id || `v-${index}`,
+        title: v.description || "Issue",
+        severity: v.impact === "critical" ? "critical" : (v.impact === "serious" ? "critical" : (v.impact === "minor" ? "minor" : "moderate")),
+        impact: v.ai_impact || "Unknown impact",
+        description: v.failure_summary || "No description",
+        suggestedFix: v.ai_explanation || "No suggested fix",
+        codeSnippet: {
+            current: v.element_html || "",
+            fixed: v.ai_fix || ""
+        },
+        file: v.source?.file_path || "Unknown file",
+        lineNumber: v.source?.line_number || 0,
+        elementDescription: "Unknown element",
+        wcagRule: v.wcag_tags?.[0] || "WCAG 2.1",
+        affectedUsers: v.affected_users?.length ? (v.affected_users.length * 100) : 500,
+        businessPriority: v.business_priority === "P0" || v.business_priority === "P1" ? "critical" : (v.business_priority === "P2" ? "high" : "medium"),
+        isDuplicate: v.duplicate_occurrences > 1,
+        duplicateCount: v.duplicate_occurrences
+      }));
+
+      const mappedData = {
+          score: Math.max(0, 100 - ((scanData.total_violations || 0) * 2)),
+          url: scanData.url || normalizedUrl,
+          timestamp: scanData.scan_time || new Date().toISOString(),
+          passedChecks: 50,
+          totalChecks: 50 + (scanData.total_violations || 0),
+          issues: mappedIssues,
+          aiSuggestions: []
+      };
+
       return NextResponse.json({
         success: true,
-        data: scanData,
+        data: mappedData,
         requestMeta: {
           capturedUrl: normalizedUrl,
         },

@@ -73,6 +73,7 @@ export function HeroSection() {
       clearInterval(progressTimer);
       setProgress(100);
       setScannedUrl(data.data.url || normalizedUrl);
+      console.log("[Frontend] Scan response data:", JSON.stringify(data.data, null, 2));
       setReportData(data.data);
 
       setTimeout(() => {
@@ -352,14 +353,15 @@ export function HeroSection() {
                   animate={{ opacity: 1, y: 0 }}
                   className="w-full max-w-5xl mx-auto bg-white rounded-3xl p-6 md:p-8 shadow-2xl border border-slate-200 pointer-events-auto text-left"
                 >
+                  {/* Header */}
                   <div className="flex flex-col md:flex-row justify-between items-start mb-8 border-b border-slate-100 pb-6 gap-4">
                     <div>
                       <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">
                         Accessibility Scan Complete
                       </h2>
                       <p className="text-slate-600 text-sm md:text-base max-w-2xl">
-                        AI doesn't just score your site — it finds every WCAG
-                        violation, explains in plain English why it's broken and
+                        AI doesn&apos;t just score your site — it finds every WCAG
+                        violation, explains in plain English why it&apos;s broken and
                         generates the exact code fix for that specific element.
                         Not generic advice. Exportable as PDF report.
                       </p>
@@ -375,78 +377,135 @@ export function HeroSection() {
                     </button>
                   </div>
 
+                  {/* Score Overview */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div className="bg-gradient-to-br from-brand-electric/10 to-brand-blue/5 rounded-xl p-4 border border-brand-electric/20 text-center">
+                      <p className="text-3xl font-black text-brand-electric">{reportData?.score ?? 0}</p>
+                      <p className="text-xs text-slate-500 mt-1">Score</p>
+                    </div>
+                    <div className="bg-red-50 rounded-xl p-4 border border-red-100 text-center">
+                      <p className="text-3xl font-black text-red-600">{reportData?.issues?.filter((i: any) => i.severity === "critical").length ?? 0}</p>
+                      <p className="text-xs text-slate-500 mt-1">Critical</p>
+                    </div>
+                    <div className="bg-amber-50 rounded-xl p-4 border border-amber-100 text-center">
+                      <p className="text-3xl font-black text-amber-600">{reportData?.issues?.filter((i: any) => i.severity === "moderate").length ?? 0}</p>
+                      <p className="text-xs text-slate-500 mt-1">Moderate</p>
+                    </div>
+                    <div className="bg-emerald-50 rounded-xl p-4 border border-emerald-100 text-center">
+                      <p className="text-3xl font-black text-emerald-600">{reportData?.issues?.filter((i: any) => i.severity === "minor").length ?? 0}</p>
+                      <p className="text-xs text-slate-500 mt-1">Minor</p>
+                    </div>
+                  </div>
+
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {/* Left: All Developer-ready fixes */}
                     <div className="md:col-span-2 space-y-6">
                       <h3 className="font-bold text-slate-900 text-lg flex items-center gap-2">
                         <Code className="w-5 h-5 text-brand-electric" />{" "}
                         Developer-ready fixes
+                        <span className="text-xs font-normal text-slate-400 ml-2">
+                          ({reportData?.issues?.length ?? 0} issues found)
+                        </span>
                       </h3>
-                      <div className="bg-red-50 border border-red-100 rounded-xl p-5 shadow-sm">
-                        <div className="flex items-center justify-between mb-3">
-                          <span className="bg-red-100 text-red-700 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
-                            {reportData?.issues?.[0]?.severity || "Critical"}{" "}
-                            Issue
-                          </span>
-                          <span className="text-xs font-semibold text-slate-500 bg-white px-2 py-1 rounded border border-slate-200">
-                            {reportData?.issues?.[0]?.wcagRule?.split(
-                              " - ",
-                            )[0] || "WCAG 4.1.2"}
-                          </span>
-                        </div>
-                        <p className="text-slate-800 font-medium mb-2 leading-relaxed">
-                          "Line {reportData?.issues?.[0]?.lineNumber || "47"} of
-                          your homepage —{" "}
-                          {reportData?.issues?.[0]?.title ||
-                            "this button has no ARIA label"}
-                          . Here's the fixed HTML."
-                        </p>
 
-                        <div className="bg-[#0D1117] rounded-lg p-4 mt-4 overflow-x-auto relative group">
-                          <div className="absolute top-3 right-3 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                            <button className="px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white rounded-md text-xs font-medium transition-colors">
-                              Copy-paste patch
-                            </button>
-                            <button className="px-3 py-1.5 bg-brand-electric hover:bg-brand-blue text-white rounded-md text-xs font-medium transition-colors flex items-center gap-1.5">
-                              <GitPullRequest className="w-3.5 h-3.5" /> Open PR
-                              with fixes
-                            </button>
+                      {/* Render ALL issues */}
+                      {reportData?.issues?.map((issue: any, idx: number) => {
+                        const severityColors: Record<string, { bg: string; border: string; badge: string; text: string }> = {
+                          critical: { bg: "bg-red-50", border: "border-red-100", badge: "bg-red-100 text-red-700", text: "text-red-700" },
+                          moderate: { bg: "bg-amber-50", border: "border-amber-100", badge: "bg-amber-100 text-amber-700", text: "text-amber-700" },
+                          minor: { bg: "bg-blue-50", border: "border-blue-100", badge: "bg-blue-100 text-blue-700", text: "text-blue-700" },
+                        };
+                        const colors = severityColors[issue.severity] || severityColors.moderate;
+
+                        return (
+                          <div key={`issue-${idx}`} className={`${colors.bg} border ${colors.border} rounded-xl p-5 shadow-sm`}>
+                            <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
+                              <div className="flex items-center gap-2 flex-wrap">
+                                <span className={`${colors.badge} px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider`}>
+                                  {issue.severity} Issue
+                                </span>
+                                {issue.isDuplicate && (
+                                  <span className="bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full text-[10px] font-semibold">
+                                    ×{issue.duplicateCount} duplicates
+                                  </span>
+                                )}
+                                <span className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">
+                                  {issue.businessPriority} priority
+                                </span>
+                              </div>
+                              <span className="text-xs font-semibold text-slate-500 bg-white px-2 py-1 rounded border border-slate-200">
+                                {issue.wcagRule}
+                              </span>
+                            </div>
+
+                            {/* Issue title + AI explanation */}
+                            <p className="text-slate-800 font-medium mb-1 leading-relaxed">
+                              {issue.title}
+                            </p>
+                            <p className="text-slate-600 text-sm mb-3 leading-relaxed">
+                              {issue.suggestedFix}
+                            </p>
+
+                            {/* Impact */}
+                            <p className="text-xs text-slate-500 mb-3 italic">
+                              Impact: {issue.impact}
+                            </p>
+
+                            {/* Code diff */}
+                            {(issue.codeSnippet?.current || issue.codeSnippet?.fixed) && (
+                              <div className="bg-[#0D1117] rounded-lg p-4 overflow-x-auto relative group">
+                                <div className="absolute top-3 right-3 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                  <button
+                                    className="px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white rounded-md text-xs font-medium transition-colors"
+                                    onClick={() => {
+                                      const patch = `- ${issue.codeSnippet.current}\n+ ${issue.codeSnippet.fixed}`;
+                                      navigator.clipboard.writeText(patch);
+                                    }}
+                                  >
+                                    Copy-paste patch
+                                  </button>
+                                  <button className="px-3 py-1.5 bg-brand-electric hover:bg-brand-blue text-white rounded-md text-xs font-medium transition-colors flex items-center gap-1.5">
+                                    <GitPullRequest className="w-3.5 h-3.5" /> Open PR with fixes
+                                  </button>
+                                </div>
+                                <pre className="text-[13px] text-slate-300 font-mono leading-relaxed whitespace-pre-wrap">
+                                  <code>
+                                    {issue.codeSnippet.current && (
+                                      <>
+                                        <span className="text-red-400">- {issue.codeSnippet.current}</span>
+                                        <br />
+                                      </>
+                                    )}
+                                    {issue.codeSnippet.fixed && (
+                                      <span className="text-emerald-400">+ {issue.codeSnippet.fixed}</span>
+                                    )}
+                                  </code>
+                                </pre>
+                              </div>
+                            )}
+
+                            {/* File + line mapping */}
+                            <div className="mt-3 flex items-center gap-2 text-xs text-slate-500 flex-wrap">
+                              <span className="font-mono bg-white px-1.5 py-0.5 rounded border border-slate-200">
+                                {issue.file}:{issue.lineNumber}
+                              </span>
+                              <span>File + line mapping for local repos</span>
+                              <span className="text-slate-400">•</span>
+                              <span>Copy-paste patch in React, Next.js, or HTML.</span>
+                            </div>
                           </div>
-                          <pre className="text-[13px] text-slate-300 font-mono mt-2 leading-relaxed whitespace-pre-wrap">
-                            <code>
-                              <span className="text-red-400">
-                                -{" "}
-                                {reportData?.issues?.[0]?.codeSnippet
-                                  ?.current ||
-                                  `<button class="cart-btn" onClick={add}></button>`}
-                              </span>
-                              <br />
-                              <span className="text-emerald-400">
-                                +{" "}
-                                {reportData?.issues?.[0]?.codeSnippet?.fixed ||
-                                  `<button class="cart-btn" aria-label="Add item to cart" onClick={add}></button>`}
-                              </span>
-                            </code>
-                          </pre>
-                        </div>
-                        <div className="mt-3 flex items-center gap-2 text-xs text-slate-500">
-                          <span className="font-mono bg-white px-1.5 py-0.5 rounded border border-slate-200">
-                            {reportData?.issues?.[0]?.file ||
-                              "components/cart.tsx"}
-                            :{reportData?.issues?.[0]?.lineNumber || "47"}
-                          </span>
-                          <span>File + line mapping for local repos</span>
-                        </div>
-                        <p className="mt-2 text-xs text-slate-500">
-                          Copy-paste patch in React, Next.js, or HTML.
-                        </p>
-                      </div>
+                        );
+                      })}
+
                       <p className="text-sm text-slate-600 italic border-l-2 border-brand-electric pl-3 py-1 bg-slate-50 rounded-r-md">
-                        This is the real pain point: people don't need more
+                        This is the real pain point: people don&apos;t need more
                         scores, they need faster fixes.
                       </p>
                     </div>
 
+                    {/* Right sidebar */}
                     <div className="space-y-6">
+                      {/* Proof and prioritization — populated with real data */}
                       <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
                         <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
                           <CheckCircle className="w-5 h-5 text-emerald-500" />{" "}
@@ -454,17 +513,22 @@ export function HeroSection() {
                         </h3>
                         <ul className="space-y-3 text-sm text-slate-600">
                           <li className="flex items-start">
-                            <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-1.5 mr-2 shrink-0" />{" "}
-                            show impact, affected users, severity, WCAG rule,
-                            and business priority
+                            <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 mr-2 shrink-0" />
+                            <span>
+                              <strong>{reportData?.issues?.length ?? 0}</strong> issues found with impact, affected users, severity, WCAG rule, and business priority
+                            </span>
                           </li>
                           <li className="flex items-start">
-                            <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-1.5 mr-2 shrink-0" />{" "}
-                            group duplicate issues across pages
+                            <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 mr-2 shrink-0" />
+                            <span>
+                              <strong>{reportData?.issues?.filter((i: any) => i.isDuplicate).length ?? 0}</strong> duplicate issues grouped across pages
+                            </span>
                           </li>
                           <li className="flex items-start">
-                            <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-1.5 mr-2 shrink-0" />{" "}
-                            tell teams what to fix first
+                            <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 mr-2 shrink-0" />
+                            <span>
+                              <strong>{reportData?.issues?.filter((i: any) => i.severity === "critical").length ?? 0}</strong> critical issues to fix first
+                            </span>
                           </li>
                         </ul>
                         <p className="text-xs text-slate-500 mt-4 pt-3 border-t border-slate-100">
@@ -473,6 +537,7 @@ export function HeroSection() {
                         </p>
                       </div>
 
+                      {/* Continuous monitoring */}
                       <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
                         <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
                           <Activity className="w-5 h-5 text-brand-electric" />{" "}
@@ -480,22 +545,45 @@ export function HeroSection() {
                         </h3>
                         <ul className="space-y-3 text-sm text-slate-600">
                           <li className="flex items-start">
-                            <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-1.5 mr-2 shrink-0" />{" "}
+                            <div className="w-1.5 h-1.5 rounded-full bg-brand-electric mt-1.5 mr-2 shrink-0" />
                             scan staging/production automatically
                           </li>
                           <li className="flex items-start">
-                            <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-1.5 mr-2 shrink-0" />{" "}
+                            <div className="w-1.5 h-1.5 rounded-full bg-brand-electric mt-1.5 mr-2 shrink-0" />
                             compare before/after
                           </li>
                           <li className="flex items-start">
-                            <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-1.5 mr-2 shrink-0" />{" "}
+                            <div className="w-1.5 h-1.5 rounded-full bg-brand-electric mt-1.5 mr-2 shrink-0" />
                             alert only on new regressions
                           </li>
                           <li className="flex items-start">
-                            <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-1.5 mr-2 shrink-0" />{" "}
+                            <div className="w-1.5 h-1.5 rounded-full bg-brand-electric mt-1.5 mr-2 shrink-0" />
                             keep an accessibility changelog
                           </li>
                         </ul>
+                      </div>
+
+                      {/* Scan metadata */}
+                      <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 shadow-sm">
+                        <h3 className="font-bold text-slate-900 mb-3 text-sm">Scan details</h3>
+                        <dl className="space-y-2 text-xs text-slate-600">
+                          <div className="flex justify-between">
+                            <dt className="text-slate-400">URL</dt>
+                            <dd className="font-mono text-right truncate max-w-[180px]">{reportData?.url || scannedUrl}</dd>
+                          </div>
+                          <div className="flex justify-between">
+                            <dt className="text-slate-400">Timestamp</dt>
+                            <dd>{reportData?.timestamp ? new Date(reportData.timestamp).toLocaleString() : "—"}</dd>
+                          </div>
+                          <div className="flex justify-between">
+                            <dt className="text-slate-400">Total issues</dt>
+                            <dd className="font-bold">{reportData?.issues?.length ?? 0}</dd>
+                          </div>
+                          <div className="flex justify-between">
+                            <dt className="text-slate-400">Score</dt>
+                            <dd className="font-bold text-brand-electric">{reportData?.score ?? "—"}/100</dd>
+                          </div>
+                        </dl>
                       </div>
                     </div>
                   </div>

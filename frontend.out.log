@@ -27,3 +27,32 @@
 ✓ Compiled in 71ms
  GET / 200 in 220ms (next.js: 123ms, application-code: 97ms)
  GET / 200 in 221ms (next.js: 184ms, application-code: 37ms)
+ GET / 200 in 360ms (next.js: 11ms, application-code: 349ms)
+ HEAD /api/scan 405 in 95ms (next.js: 78ms, application-code: 18ms)
+ GET /api/scan 405 in 13ms (next.js: 5ms, application-code: 8ms)
+ POST /api/scan 200 in 55s (next.js: 5ms, application-code: 55s)
+ GET / 200 in 279ms (next.js: 170ms, application-code: 109ms)
+ GET / 200 in 282ms (next.js: 226ms, application-code: 56ms)
+ POST /api/scan 200 in 53s (next.js: 87ms, application-code: 53s)
+✓ Compiled in 90ms
+ GET / 200 in 293ms (next.js: 147ms, application-code: 146ms)
+ GET / 200 in 296ms (next.js: 239ms, application-code: 57ms)
+✓ Compiled in 188ms
+ GET / 200 in 428ms (next.js: 166ms, application-code: 262ms)
+ GET / 200 in 430ms (next.js: 229ms, application-code: 201ms)
+ GET / 200 in 297ms (next.js: 174ms, application-code: 123ms)
+ GET / 200 in 304ms (next.js: 246ms, application-code: 58ms)
+✓ Compiled in 87ms
+ GET / 200 in 315ms (next.js: 150ms, application-code: 164ms)
+ GET / 200 in 316ms (next.js: 224ms, application-code: 92ms)
+ GET / 200 in 308ms (next.js: 6ms, application-code: 302ms)
+[API /scan] Backend returned: {
+  url: 'https://www.google.com/',
+  total_violations: 12,
+  violations_count: 12
+}
+ POST /api/scan 200 in 50s (next.js: 92ms, application-code: 50s)
+✓ Compiled in 83ms
+ GET / 200 in 315ms (next.js: 182ms, application-code: 134ms)
+ GET / 200 in 316ms (next.js: 265ms, application-code: 51ms)
+ GET / 200 in 312ms (next.js: 5ms, application-code: 307ms)

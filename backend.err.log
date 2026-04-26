@@ -14,3 +14,18 @@ INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 2026-04-26 07:16:05,214 | INFO | lumio-backend | ai_processing_duration url=https://www.google.com/ duration_ms=52660.33
 2026-04-26 07:16:05,280 | INFO | lumio-backend | scan_end url=https://www.google.com/ total_violations=12 duration_ms=61762.34
 2026-04-26 07:16:05,282 | INFO | lumio-backend | POST /scan -> 200 (61765.66ms)
+2026-04-26 07:22:38,488 | INFO | lumio-backend | scan_start url=https://www.google.com/ max_pages=3
+2026-04-26 07:22:47,773 | INFO | lumio-backend | scan_duration url=https://www.google.com/ duration_ms=9277.39
+2026-04-26 07:23:33,046 | INFO | lumio-backend | ai_processing_duration url=https://www.google.com/ duration_ms=45266.65
+2026-04-26 07:23:33,111 | INFO | lumio-backend | scan_end url=https://www.google.com/ total_violations=12 duration_ms=54622.94
+2026-04-26 07:23:33,113 | INFO | lumio-backend | POST /scan -> 200 (54626.29ms)
+2026-04-26 07:29:09,008 | INFO | lumio-backend | scan_start url=https://www.google.com/ max_pages=3
+2026-04-26 07:29:17,884 | INFO | lumio-backend | scan_duration url=https://www.google.com/ duration_ms=8863.95
+2026-04-26 07:30:01,470 | INFO | lumio-backend | ai_processing_duration url=https://www.google.com/ duration_ms=43583.10
+2026-04-26 07:30:01,526 | INFO | lumio-backend | scan_end url=https://www.google.com/ total_violations=12 duration_ms=52517.84
+2026-04-26 07:30:01,528 | INFO | lumio-backend | POST /scan -> 200 (52521.25ms)
+2026-04-26 07:34:48,796 | INFO | lumio-backend | scan_start url=https://www.google.com/ max_pages=3
+2026-04-26 07:34:58,001 | INFO | lumio-backend | scan_duration url=https://www.google.com/ duration_ms=9202.73
+2026-04-26 07:35:38,846 | INFO | lumio-backend | ai_processing_duration url=https://www.google.com/ duration_ms=40844.68
+2026-04-26 07:35:38,921 | INFO | lumio-backend | scan_end url=https://www.google.com/ total_violations=12 duration_ms=50125.35
+2026-04-26 07:35:38,923 | INFO | lumio-backend | POST /scan -> 200 (50128.76ms)
