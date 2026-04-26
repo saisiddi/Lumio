@@ -250,17 +250,6 @@ export function LiquidRevealFlow({ disableHover = false }: { disableHover?: bool
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
       />
-      
-      {!isHovering && !disableHover && isReady && (
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="absolute top-6 left-1/2 -translate-x-1/2 bg-brand-midnight/90 text-brand-electric px-6 py-2 rounded-full text-xs font-bold tracking-[0.2em] flex items-center gap-3 backdrop-blur-md z-30 pointer-events-none border border-brand-electric/30 shadow-[0_0_20px_rgba(59,130,246,0.2)]"
-        >
-          <div className="w-2 h-2 rounded-full bg-brand-electric animate-pulse" />
-          HOVER TO FLOW
-        </motion.div>
-      )}
     </div>
   );
 }

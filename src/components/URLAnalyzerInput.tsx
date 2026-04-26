@@ -3,20 +3,29 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { Search, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export function URLAnalyzerInput({ className, onScan }: { className?: string, onScan?: (url: string) => void }) {
+const PAGE_OPTIONS = [1, 2, 5];
+
+export function URLAnalyzerInput({
+  className,
+  onScan,
+}: {
+  className?: string;
+  onScan?: (url: string, maxPages: number) => void;
+}) {
   const [url, setUrl] = useState("");
+  const [maxPages, setMaxPages] = useState(1);
   const router = useRouter();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (url.trim()) {
       if (onScan) {
-        onScan(url);
+        onScan(url, maxPages);
       } else {
-        router.push(`/scan?url=${encodeURIComponent(url)}`);
+        router.push(`/scan?url=${encodeURIComponent(url)}&pages=${maxPages}`);
       }
     }
   };
@@ -28,10 +37,9 @@ export function URLAnalyzerInput({ className, onScan }: { className?: string, on
       transition={{ duration: 0.8, delay: 0.2 }}
       className={cn("w-full max-w-2xl mx-auto", className)}
     >
-      <form onSubmit={handleSubmit} className="relative group">
+      <form onSubmit={handleSubmit} className="relative group space-y-3">
         <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-brand-electric/40 via-brand-blue/30 to-brand-violet/35 blur-md opacity-30 group-hover:opacity-60 transition duration-500" />
         <div className="relative flex items-center rounded-2xl border border-slate-200/80 bg-white/92 p-2 pl-6 shadow-[0_18px_40px_rgba(15,23,42,0.16)] backdrop-blur-xl">
-          <Search className="w-6 h-6 text-brand-electric mr-4" />
           <input
             type="url"
             value={url}
@@ -46,6 +54,27 @@ export function URLAnalyzerInput({ className, onScan }: { className?: string, on
           >
             Scan URL <ArrowRight className="w-5 h-5" />
           </button>
+        </div>
+
+        {/* Page count selector */}
+        <div className="relative flex items-center justify-center gap-2">
+          <span className="text-xs text-slate-500 font-medium">Pages to scan:</span>
+          <div className="flex gap-1.5">
+            {PAGE_OPTIONS.map((count) => (
+              <button
+                key={count}
+                type="button"
+                onClick={() => setMaxPages(count)}
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all duration-200 ${
+                  maxPages === count
+                    ? "bg-brand-electric text-white shadow-md shadow-brand-electric/30"
+                    : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                }`}
+              >
+                {count} {count === 1 ? "page" : "pages"}
+              </button>
+            ))}
+          </div>
         </div>
       </form>
     </motion.div>

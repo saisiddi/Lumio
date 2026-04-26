@@ -11,12 +11,22 @@ import {
 import { URLAnalyzerInput } from "./URLAnalyzerInput";
 import { LiquidRevealFlow } from "./LiquidReveal";
 import { PuzzleAnalysis } from "./PuzzleAnalysis";
+import { ScanCharts } from "./ScanCharts";
+import { generateAccessibilityPDF } from "@/lib/generatePDF";
 import {
   CheckCircle,
   Activity,
   FileText,
   Code,
   GitPullRequest,
+  ChevronDown,
+  ChevronUp,
+  Users,
+  Clock,
+  Clipboard,
+  Check,
+  AlertTriangle,
+  Wrench,
 } from "lucide-react";
 
 export function HeroSection() {
@@ -30,8 +40,30 @@ export function HeroSection() {
   const [reportData, setReportData] = useState<any>(null);
   const [scannedUrl, setScannedUrl] = useState("");
   const [scanError, setScanError] = useState<string | null>(null);
+  const [expandedIssues, setExpandedIssues] = useState<Set<number>>(new Set([0]));
+  const [copiedIdx, setCopiedIdx] = useState<number | null>(null);
 
-  const handleScan = async (url: string) => {
+  const toggleIssue = (idx: number) => {
+    setExpandedIssues(prev => {
+      const next = new Set(prev);
+      if (next.has(idx)) next.delete(idx); else next.add(idx);
+      return next;
+    });
+  };
+
+  const copyToClipboard = (text: string, idx: number) => {
+    navigator.clipboard.writeText(text);
+    setCopiedIdx(idx);
+    setTimeout(() => setCopiedIdx(null), 2000);
+  };
+
+  const getDifficulty = (issue: any) => {
+    if (issue.severity === "minor") return { label: "Easy fix", time: "~1 min", color: "text-emerald-600 bg-emerald-50 border-emerald-200" };
+    if (issue.severity === "moderate") return { label: "Medium fix", time: "~5 min", color: "text-amber-600 bg-amber-50 border-amber-200" };
+    return { label: "Important fix", time: "~10 min", color: "text-red-600 bg-red-50 border-red-200" };
+  };
+
+  const handleScan = async (url: string, maxPages: number = 1) => {
     const normalizedUrl = url.trim();
     if (!normalizedUrl) return;
 
@@ -42,17 +74,27 @@ export function HeroSection() {
     setScanError(null);
     setScannedUrl(normalizedUrl);
 
-    let currentStep = 0;
+    // Auto-scroll to the bottom of the hero section so the white overlay
+    // and scanning animation are fully visible.
+    if (containerRef.current) {
+      const sectionBottom = containerRef.current.offsetTop + containerRef.current.offsetHeight;
+      window.scrollTo({ top: sectionBottom, behavior: "smooth" });
+    }
+
+    let currentProgress = 0;
     const progressTimer = setInterval(() => {
-      currentStep++;
-      setProgress(Math.min(90, currentStep * 4)); // Progresses up to 90%
-    }, 100);
+      // Asymptotic curve: each tick adds 5% of the remaining distance to 90.
+      // This gives fast initial progress that naturally decelerates,
+      // reaching ~50% at ~14s, ~75% at ~28s, ~85% at ~40s, ~89% at ~60s.
+      currentProgress += (90 - currentProgress) * 0.05;
+      setProgress(Math.round(currentProgress));
+    }, 1000);
 
     try {
       const res = await fetch("/api/scan", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url: normalizedUrl }),
+        body: JSON.stringify({ url: normalizedUrl, max_pages: maxPages }),
       });
 
       let data;
@@ -264,33 +306,38 @@ export function HeroSection() {
 
       {/* === Search box + cards — on top of white at zIndex: 100 === */}
       <div
-        className="fixed inset-0 flex items-center justify-center px-6 pointer-events-none"
+        className="fixed inset-0 flex items-start justify-center px-4 md:px-8 pt-8 pointer-events-none"
         style={{ zIndex: 100 }}
       >
         <motion.div
           style={{ y: ySearch, opacity: opacitySearch }}
-          className={`w-full max-w-5xl space-y-8 ${isSearchInteractive ? "pointer-events-auto" : "pointer-events-none"} ${isScanning || scanComplete ? "max-h-[92vh] overflow-y-auto pb-16 pt-6 pr-1 scrollbar-hide" : ""}`}
+          className={`w-full max-w-7xl space-y-8 ${isSearchInteractive ? "pointer-events-auto" : "pointer-events-none"} ${isScanning || scanComplete ? "max-h-[96vh] overflow-y-auto pb-16 pt-4 pr-1 scrollbar-hide" : "flex flex-col items-center justify-center min-h-[80vh]"}`}
         >
-          <div className="space-y-4 text-center max-w-3xl mx-auto">
-            <p className="text-[11px] uppercase tracking-[0.25em] font-semibold text-brand-electric/80">
-              AI Accessibility Intelligence
-            </p>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-[-0.03em] text-slate-900 leading-[0.95]">
-              Paste a URL.
-            </h2>
-            <p className="text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-              AI doesn't just score your site — it finds every WCAG violation,
-              explains in plain English why it's broken and generates the exact
-              code fix for that specific element. Not generic advice.
-            </p>
-          </div>
+          {/* Header card — hidden during scanning/results to avoid overlapping the puzzle */}
+          {!isScanning && !scanComplete && (
+            <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-8 md:p-10 shadow-[0_20px_60px_rgba(15,23,42,0.12)] border border-slate-200/60">
+              <div className="space-y-4 text-center max-w-3xl mx-auto">
+                <p className="text-[11px] uppercase tracking-[0.25em] font-semibold text-brand-electric">
+                  AI Accessibility Intelligence
+                </p>
+                <h2 className="text-3xl md:text-5xl font-bold tracking-[-0.03em] text-slate-900 leading-[0.95]">
+                  Paste a URL.
+                </h2>
+                <p className="text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
+                  AI doesn&apos;t just score your site — it finds every WCAG violation,
+                  explains in plain English why it&apos;s broken and generates the exact
+                  code fix for that specific element. Not generic advice.
+                </p>
+              </div>
 
-          <div className="space-y-3 max-w-3xl mx-auto">
-            <URLAnalyzerInput onScan={handleScan} />
-            <p className="text-center text-xs text-slate-500 tracking-wide">
-              Try: nike.com | stripe.com | airbnb.com
-            </p>
-          </div>
+              <div className="space-y-3 max-w-3xl mx-auto mt-6">
+                <URLAnalyzerInput onScan={handleScan} />
+                <p className="text-center text-xs text-slate-500 tracking-wide">
+                  Try: https://www.nike.com | https://www.stripe.com | https://www.airbnb.com
+                </p>
+              </div>
+            </div>
+          )}
 
           <div className="w-full pt-4">
             {scanError && (
@@ -351,7 +398,7 @@ export function HeroSection() {
                   key="complete"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="w-full max-w-5xl mx-auto bg-white rounded-3xl p-6 md:p-8 shadow-2xl border border-slate-200 pointer-events-auto text-left"
+                  className="w-full max-w-7xl mx-auto bg-white rounded-3xl p-6 md:p-10 shadow-2xl border border-slate-200 pointer-events-auto text-left"
                 >
                   {/* Header */}
                   <div className="flex flex-col md:flex-row justify-between items-start mb-8 border-b border-slate-100 pb-6 gap-4">
@@ -359,20 +406,28 @@ export function HeroSection() {
                       <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">
                         Accessibility Scan Complete
                       </h2>
+                      <div className="flex items-center gap-2 mb-3 bg-slate-50 border border-slate-200 rounded-lg px-4 py-2.5 max-w-fit">
+                        <span className="text-xs text-slate-400 font-semibold uppercase tracking-wider">Scanned URL</span>
+                        <a
+                          href={reportData?.url || scannedUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-brand-electric font-mono text-sm font-bold hover:underline"
+                        >
+                          {reportData?.url || scannedUrl}
+                        </a>
+                      </div>
                       <p className="text-slate-600 text-sm md:text-base max-w-2xl">
                         AI doesn&apos;t just score your site — it finds every WCAG
                         violation, explains in plain English why it&apos;s broken and
                         generates the exact code fix for that specific element.
                         Not generic advice. Exportable as PDF report.
                       </p>
-                      <p className="text-xs text-slate-500 mt-2">
-                        API captured:{" "}
-                        <span className="font-mono">
-                          {reportData?.url || scannedUrl}
-                        </span>
-                      </p>
                     </div>
-                    <button className="whitespace-nowrap px-4 py-2 flex items-center gap-2 bg-brand-midnight hover:bg-slate-800 text-white rounded-lg text-sm font-semibold transition-colors shadow-md">
+                    <button
+                      onClick={() => generateAccessibilityPDF(reportData, scannedUrl)}
+                      className="whitespace-nowrap px-4 py-2 flex items-center gap-2 bg-brand-midnight hover:bg-slate-800 text-white rounded-lg text-sm font-semibold transition-colors shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
+                    >
                       <FileText className="w-4 h-4" /> Export PDF Report
                     </button>
                   </div>
@@ -408,91 +463,173 @@ export function HeroSection() {
                         </span>
                       </h3>
 
-                      {/* Render ALL issues */}
+                      {/* Render ALL issues — beginner-friendly cards */}
                       {reportData?.issues?.map((issue: any, idx: number) => {
-                        const severityColors: Record<string, { bg: string; border: string; badge: string; text: string }> = {
-                          critical: { bg: "bg-red-50", border: "border-red-100", badge: "bg-red-100 text-red-700", text: "text-red-700" },
-                          moderate: { bg: "bg-amber-50", border: "border-amber-100", badge: "bg-amber-100 text-amber-700", text: "text-amber-700" },
-                          minor: { bg: "bg-blue-50", border: "border-blue-100", badge: "bg-blue-100 text-blue-700", text: "text-blue-700" },
+                        const severityColors: Record<string, { bg: string; border: string; badge: string; accent: string }> = {
+                          critical: { bg: "bg-red-50", border: "border-red-200", badge: "bg-red-100 text-red-700", accent: "border-l-red-500" },
+                          moderate: { bg: "bg-amber-50", border: "border-amber-200", badge: "bg-amber-100 text-amber-700", accent: "border-l-amber-500" },
+                          minor: { bg: "bg-blue-50", border: "border-blue-200", badge: "bg-blue-100 text-blue-700", accent: "border-l-blue-500" },
                         };
                         const colors = severityColors[issue.severity] || severityColors.moderate;
+                        const difficulty = getDifficulty(issue);
+                        const isExpanded = expandedIssues.has(idx);
+                        const totalIssues = reportData?.issues?.length ?? 0;
 
                         return (
-                          <div key={`issue-${idx}`} className={`${colors.bg} border ${colors.border} rounded-xl p-5 shadow-sm`}>
-                            <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
-                              <div className="flex items-center gap-2 flex-wrap">
-                                <span className={`${colors.badge} px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider`}>
-                                  {issue.severity} Issue
-                                </span>
-                                {issue.isDuplicate && (
-                                  <span className="bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full text-[10px] font-semibold">
-                                    ×{issue.duplicateCount} duplicates
+                          <div key={`issue-${idx}`} className={`${colors.bg} border ${colors.border} border-l-4 ${colors.accent} rounded-xl shadow-sm overflow-hidden transition-all duration-300`}>
+                            {/* Clickable header — always visible */}
+                            <button
+                              onClick={() => toggleIssue(idx)}
+                              className="w-full text-left p-5 flex items-start justify-between gap-3 hover:bg-black/[0.02] transition-colors"
+                            >
+                              <div className="flex-1 min-w-0">
+                                {/* Issue number + severity + difficulty */}
+                                <div className="flex items-center gap-2 flex-wrap mb-2">
+                                  <span className="bg-slate-800 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold">
+                                    #{idx + 1} of {totalIssues}
                                   </span>
-                                )}
-                                <span className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">
-                                  {issue.businessPriority} priority
-                                </span>
-                              </div>
-                              <span className="text-xs font-semibold text-slate-500 bg-white px-2 py-1 rounded border border-slate-200">
-                                {issue.wcagRule}
-                              </span>
-                            </div>
-
-                            {/* Issue title + AI explanation */}
-                            <p className="text-slate-800 font-medium mb-1 leading-relaxed">
-                              {issue.title}
-                            </p>
-                            <p className="text-slate-600 text-sm mb-3 leading-relaxed">
-                              {issue.suggestedFix}
-                            </p>
-
-                            {/* Impact */}
-                            <p className="text-xs text-slate-500 mb-3 italic">
-                              Impact: {issue.impact}
-                            </p>
-
-                            {/* Code diff */}
-                            {(issue.codeSnippet?.current || issue.codeSnippet?.fixed) && (
-                              <div className="bg-[#0D1117] rounded-lg p-4 overflow-x-auto relative group">
-                                <div className="absolute top-3 right-3 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                                  <button
-                                    className="px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white rounded-md text-xs font-medium transition-colors"
-                                    onClick={() => {
-                                      const patch = `- ${issue.codeSnippet.current}\n+ ${issue.codeSnippet.fixed}`;
-                                      navigator.clipboard.writeText(patch);
-                                    }}
-                                  >
-                                    Copy-paste patch
-                                  </button>
-                                  <button className="px-3 py-1.5 bg-brand-electric hover:bg-brand-blue text-white rounded-md text-xs font-medium transition-colors flex items-center gap-1.5">
-                                    <GitPullRequest className="w-3.5 h-3.5" /> Open PR with fixes
-                                  </button>
+                                  <span className={`${colors.badge} px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider`}>
+                                    {issue.severity}
+                                  </span>
+                                  <span className={`${difficulty.color} px-2.5 py-0.5 rounded-full text-[10px] font-bold border`}>
+                                    {difficulty.label}
+                                  </span>
+                                  <span className="flex items-center gap-1 text-[10px] text-slate-400 font-medium">
+                                    <Clock className="w-3 h-3" /> {difficulty.time}
+                                  </span>
                                 </div>
-                                <pre className="text-[13px] text-slate-300 font-mono leading-relaxed whitespace-pre-wrap">
-                                  <code>
-                                    {issue.codeSnippet.current && (
-                                      <>
-                                        <span className="text-red-400">- {issue.codeSnippet.current}</span>
-                                        <br />
-                                      </>
+
+                                {/* Plain English title */}
+                                <p className="text-slate-900 font-semibold text-base leading-snug">
+                                  {issue.title}
+                                </p>
+
+                                {/* Quick summary — always visible */}
+                                <p className="text-slate-500 text-sm mt-1 leading-relaxed line-clamp-2">
+                                  {issue.suggestedFix}
+                                </p>
+                              </div>
+
+                              <div className="shrink-0 mt-1">
+                                {isExpanded
+                                  ? <ChevronUp className="w-5 h-5 text-slate-400" />
+                                  : <ChevronDown className="w-5 h-5 text-slate-400" />
+                                }
+                              </div>
+                            </button>
+
+                            {/* Expandable detail section */}
+                            {isExpanded && (
+                              <div className="px-5 pb-5 space-y-4 border-t border-black/5">
+                                {/* Who is affected */}
+                                <div className="bg-white/70 rounded-lg p-3 mt-4">
+                                  <p className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                                    <Users className="w-3.5 h-3.5 text-brand-electric" /> Who is affected?
+                                  </p>
+                                  <p className="text-sm text-slate-600 leading-relaxed">
+                                    {issue.impact}
+                                  </p>
+                                </div>
+
+                                {/* Step-by-step How to Fix */}
+                                <div className="bg-white/70 rounded-lg p-3">
+                                  <p className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+                                    <Wrench className="w-3.5 h-3.5 text-brand-electric" /> How to fix (step by step)
+                                  </p>
+                                  <ol className="space-y-2 text-sm text-slate-700">
+                                    {issue.file && issue.file !== "Unknown file" && (
+                                      <li className="flex items-start gap-2">
+                                        <span className="shrink-0 w-5 h-5 rounded-full bg-brand-electric text-white text-[10px] font-bold flex items-center justify-center mt-0.5">1</span>
+                                        <span>Open <code className="bg-slate-100 px-1.5 py-0.5 rounded text-xs font-mono">{issue.file}</code>{issue.lineNumber > 0 && <> at line <strong>{issue.lineNumber}</strong></>}</span>
+                                      </li>
                                     )}
-                                    {issue.codeSnippet.fixed && (
-                                      <span className="text-emerald-400">+ {issue.codeSnippet.fixed}</span>
-                                    )}
-                                  </code>
-                                </pre>
+                                    <li className="flex items-start gap-2">
+                                      <span className="shrink-0 w-5 h-5 rounded-full bg-brand-electric text-white text-[10px] font-bold flex items-center justify-center mt-0.5">{issue.file && issue.file !== "Unknown file" ? "2" : "1"}</span>
+                                      <span>Find this code in your file:</span>
+                                    </li>
+                                  </ol>
+                                </div>
+
+                                {/* Code diff — before/after */}
+                                {(issue.codeSnippet?.current || issue.codeSnippet?.fixed) && (
+                                  <div>
+                                    <div className="flex items-center justify-between mb-2">
+                                      <p className="text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1.5">
+                                        <Code className="w-3.5 h-3.5 text-brand-electric" /> Before → After
+                                      </p>
+                                    </div>
+                                    <div className="bg-[#0D1117] rounded-lg overflow-hidden">
+                                      {issue.codeSnippet.current && (
+                                        <div className="px-4 py-3 border-b border-white/10">
+                                          <p className="text-[10px] text-red-400 font-semibold uppercase tracking-wider mb-1">❌ Current (broken)</p>
+                                          <pre className="text-[13px] text-red-300 font-mono whitespace-pre-wrap leading-relaxed">{issue.codeSnippet.current}</pre>
+                                        </div>
+                                      )}
+                                      {issue.codeSnippet.fixed && (
+                                        <div className="px-4 py-3">
+                                          <p className="text-[10px] text-emerald-400 font-semibold uppercase tracking-wider mb-1">✅ Fixed (copy this)</p>
+                                          <pre className="text-[13px] text-emerald-300 font-mono whitespace-pre-wrap leading-relaxed">{issue.codeSnippet.fixed}</pre>
+                                        </div>
+                                      )}
+                                    </div>
+
+                                    {/* Action buttons */}
+                                    <div className="flex items-center gap-2 mt-3 flex-wrap">
+                                      {issue.codeSnippet.fixed && (
+                                        <button
+                                          onClick={() => copyToClipboard(issue.codeSnippet.fixed, idx)}
+                                          className={`flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold transition-all duration-200 ${
+                                            copiedIdx === idx
+                                              ? "bg-emerald-500 text-white"
+                                              : "bg-slate-800 hover:bg-slate-700 text-white"
+                                          }`}
+                                        >
+                                          {copiedIdx === idx ? (
+                                            <><Check className="w-3.5 h-3.5" /> Copied!</>
+                                          ) : (
+                                            <><Clipboard className="w-3.5 h-3.5" /> Copy fixed code</>
+                                          )}
+                                        </button>
+                                      )}
+                                      <div className="relative group/pr">
+                                        <button className="flex items-center gap-1.5 px-4 py-2 bg-brand-electric/60 text-white rounded-lg text-xs font-semibold transition-colors cursor-default opacity-80">
+                                          <GitPullRequest className="w-3.5 h-3.5" /> Open PR with fix
+                                        </button>
+                                        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-slate-800 text-white text-[10px] font-semibold rounded-lg shadow-lg whitespace-nowrap opacity-0 group-hover/pr:opacity-100 transition-opacity pointer-events-none">
+                                          🚀 Coming soon
+                                          <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-px w-2 h-2 bg-slate-800 rotate-45" />
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                )}
+
+                                {/* The final step */}
+                                <div className="bg-white/70 rounded-lg p-3">
+                                  <ol className="space-y-2 text-sm text-slate-700" start={issue.file && issue.file !== "Unknown file" ? 3 : 2}>
+                                    <li className="flex items-start gap-2">
+                                      <span className="shrink-0 w-5 h-5 rounded-full bg-brand-electric text-white text-[10px] font-bold flex items-center justify-center mt-0.5">{issue.file && issue.file !== "Unknown file" ? "3" : "2"}</span>
+                                      <span>Replace the broken code with the <strong className="text-emerald-600">green version above</strong>, save, and refresh your page.</span>
+                                    </li>
+                                  </ol>
+                                </div>
+
+                                {/* WCAG + metadata footer */}
+                                <div className="flex items-center gap-2 text-[10px] text-slate-400 flex-wrap pt-1">
+                                  <span className="bg-white px-2 py-0.5 rounded border border-slate-200 font-semibold text-slate-500">
+                                    {issue.wcagRule}
+                                  </span>
+                                  {issue.isDuplicate && (
+                                    <span className="bg-white px-2 py-0.5 rounded border border-slate-200 font-semibold text-slate-500">
+                                      Found {issue.duplicateCount}× across pages
+                                    </span>
+                                  )}
+                                  <span className="uppercase tracking-wider font-semibold">
+                                    {issue.businessPriority} priority
+                                  </span>
+                                </div>
                               </div>
                             )}
-
-                            {/* File + line mapping */}
-                            <div className="mt-3 flex items-center gap-2 text-xs text-slate-500 flex-wrap">
-                              <span className="font-mono bg-white px-1.5 py-0.5 rounded border border-slate-200">
-                                {issue.file}:{issue.lineNumber}
-                              </span>
-                              <span>File + line mapping for local repos</span>
-                              <span className="text-slate-400">•</span>
-                              <span>Copy-paste patch in React, Next.js, or HTML.</span>
-                            </div>
                           </div>
                         );
                       })}
@@ -503,88 +640,9 @@ export function HeroSection() {
                       </p>
                     </div>
 
-                    {/* Right sidebar */}
+                    {/* Right sidebar — Charts & Visualizations */}
                     <div className="space-y-6">
-                      {/* Proof and prioritization — populated with real data */}
-                      <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
-                        <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
-                          <CheckCircle className="w-5 h-5 text-emerald-500" />{" "}
-                          Proof and prioritization
-                        </h3>
-                        <ul className="space-y-3 text-sm text-slate-600">
-                          <li className="flex items-start">
-                            <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 mr-2 shrink-0" />
-                            <span>
-                              <strong>{reportData?.issues?.length ?? 0}</strong> issues found with impact, affected users, severity, WCAG rule, and business priority
-                            </span>
-                          </li>
-                          <li className="flex items-start">
-                            <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 mr-2 shrink-0" />
-                            <span>
-                              <strong>{reportData?.issues?.filter((i: any) => i.isDuplicate).length ?? 0}</strong> duplicate issues grouped across pages
-                            </span>
-                          </li>
-                          <li className="flex items-start">
-                            <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 mr-2 shrink-0" />
-                            <span>
-                              <strong>{reportData?.issues?.filter((i: any) => i.severity === "critical").length ?? 0}</strong> critical issues to fix first
-                            </span>
-                          </li>
-                        </ul>
-                        <p className="text-xs text-slate-500 mt-4 pt-3 border-t border-slate-100">
-                          Most accessibility tools overwhelm teams. Prioritization
-                          is a huge differentiator.
-                        </p>
-                      </div>
-
-                      {/* Continuous monitoring */}
-                      <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
-                        <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
-                          <Activity className="w-5 h-5 text-brand-electric" />{" "}
-                          Continuous monitoring
-                        </h3>
-                        <ul className="space-y-3 text-sm text-slate-600">
-                          <li className="flex items-start">
-                            <div className="w-1.5 h-1.5 rounded-full bg-brand-electric mt-1.5 mr-2 shrink-0" />
-                            scan staging/production automatically
-                          </li>
-                          <li className="flex items-start">
-                            <div className="w-1.5 h-1.5 rounded-full bg-brand-electric mt-1.5 mr-2 shrink-0" />
-                            compare before/after
-                          </li>
-                          <li className="flex items-start">
-                            <div className="w-1.5 h-1.5 rounded-full bg-brand-electric mt-1.5 mr-2 shrink-0" />
-                            alert only on new regressions
-                          </li>
-                          <li className="flex items-start">
-                            <div className="w-1.5 h-1.5 rounded-full bg-brand-electric mt-1.5 mr-2 shrink-0" />
-                            keep an accessibility changelog
-                          </li>
-                        </ul>
-                      </div>
-
-                      {/* Scan metadata */}
-                      <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 shadow-sm">
-                        <h3 className="font-bold text-slate-900 mb-3 text-sm">Scan details</h3>
-                        <dl className="space-y-2 text-xs text-slate-600">
-                          <div className="flex justify-between">
-                            <dt className="text-slate-400">URL</dt>
-                            <dd className="font-mono text-right truncate max-w-[180px]">{reportData?.url || scannedUrl}</dd>
-                          </div>
-                          <div className="flex justify-between">
-                            <dt className="text-slate-400">Timestamp</dt>
-                            <dd>{reportData?.timestamp ? new Date(reportData.timestamp).toLocaleString() : "—"}</dd>
-                          </div>
-                          <div className="flex justify-between">
-                            <dt className="text-slate-400">Total issues</dt>
-                            <dd className="font-bold">{reportData?.issues?.length ?? 0}</dd>
-                          </div>
-                          <div className="flex justify-between">
-                            <dt className="text-slate-400">Score</dt>
-                            <dd className="font-bold text-brand-electric">{reportData?.score ?? "—"}/100</dd>
-                          </div>
-                        </dl>
-                      </div>
+                      <ScanCharts reportData={reportData} />
                     </div>
                   </div>
                 </motion.div>
