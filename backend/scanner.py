@@ -57,7 +57,15 @@ def _scan_single_page(page: Any, url: str) -> dict[str, Any]:
     try:
         page.goto(url, wait_until="load", timeout=PLAYWRIGHT_TIMEOUT_MS)
     except PlaywrightTimeoutError as exc:
-        raise RuntimeError("Timed out while opening URL") from exc
+        raise RuntimeError(f"Timed out while opening URL: {url}") from exc
+    except Exception as exc:
+        print(f"Skipping {url} due to error: {exc}")
+        return {
+            "url": url,
+            "title": "Failed to load",
+            "violations": [],
+            "internal_links": [],
+        }
 
     # Evaluate axe directly in the page context so we avoid both TrustedScriptURL
     # and TrustedScript restrictions on dynamic script elements.

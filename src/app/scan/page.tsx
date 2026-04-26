@@ -35,10 +35,15 @@ export default function ScanPage() {
       const newStepIndex = Math.floor((newProgress / 100) * scanSteps.length);
       setStepIndex(Math.min(newStepIndex, scanSteps.length - 1));
 
-      if (newProgress >= 100) {
-        clearInterval(timer);
-        setTimeout(() => router.push("/report"), 1000);
-      }
+if (newProgress >= 100) {
+            clearInterval(timer);
+            const urlParams = new URLSearchParams(window.location.search);
+            const scanUrl = urlParams.get("url");
+            if (scanUrl) {
+              sessionStorage.setItem("pendingScanUrl", scanUrl);
+            }
+            setTimeout(() => router.push("/report"), 1000);
+          }
     }, intervalTime);
 
     return () => clearInterval(timer);

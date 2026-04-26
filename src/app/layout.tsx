@@ -10,7 +10,8 @@ const space = Space_Grotesk({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
   title: "Lumio | AI-Powered Accessibility Auditor",
-  description: "Make the Web Accessible for Everyone. Scan websites, reveal issues, and suggest instant fixes.",
+  description:
+    "Make the Web Accessible for Everyone. Scan websites, reveal issues, and suggest instant fixes.",
 };
 
 export default function RootLayout({
@@ -19,13 +20,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${space.variable} dark`} suppressHydrationWarning>
-      <body className="antialiased min-h-screen flex flex-col" suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${inter.variable} ${space.variable} dark`}
+      suppressHydrationWarning
+    >
+      <body
+        className="antialiased min-h-screen flex flex-col"
+        suppressHydrationWarning
+      >
         <AuthProvider>
           <Navbar />
-          <main className="flex-1">
-            {children}
-          </main>
+          <main className="flex-1">{children}</main>
           <Footer />
         </AuthProvider>
       </body>

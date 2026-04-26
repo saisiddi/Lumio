@@ -6,6 +6,8 @@
   --color-brand-slate: #1a1d24;
   --color-brand-electric: #3b82f6;
   --color-brand-violet: #8b5cf6;
+  --color-brand-blue: #4fb0c6;
+  --color-brand-neon: #f0bf4c;
   --color-text-pure: #f8fafc;
   --color-text-cool: #94a3b8;
   --color-border-steel: #27303f;
@@ -45,7 +47,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Viewport Frame - Subtle Electric Glow */
+/* Viewport frame - subtle electric glow */
 body::after {
   content: "";
   position: fixed;
@@ -59,7 +61,7 @@ body::after {
   transition: opacity 0.3s ease;
 }
 
-/* When the hero white overlay is active, hide the body frame and navbar */
+/* When hero white overlay is active, hide frame and navbar */
 body.hero-white-active::after {
   opacity: 0;
 }
@@ -76,12 +78,17 @@ body.hero-white-active nav {
   color: transparent;
 }
 
+@utility text-stroke-neon {
+  -webkit-text-stroke: 1px rgba(240, 191, 76, 0.34);
+  color: transparent;
+}
+
 @utility text-stroke-white {
   -webkit-text-stroke: 1px rgba(248, 250, 252, 0.1);
   color: transparent;
 }
 
-/* Advanced Premium Glassmorphism utilities */
+/* Glassmorphism utilities */
 @utility glass {
   background: rgba(26, 29, 36, 0.5);
   backdrop-filter: blur(24px);
@@ -127,7 +134,6 @@ body.hero-white-active nav {
     0 0 60px rgba(139, 92, 246, 0.05);
 }
 
-/* Kept for components that still reference this class name. */
 @utility box-glow-blue {
   box-shadow:
     0 0 16px rgba(79, 176, 198, 0.24),
