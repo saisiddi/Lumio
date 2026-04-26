@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { mockReportData } from "@/mock/report";
 
-const BACKEND_URL = process.env.BACKEND_URL?.trim() || "http://127.0.0.1:8000";
+const BACKEND_URL = process.env.BACKEND_URL?.trim() || "http://127.0.0.1:8080";
 const ENABLE_MOCK_SCAN_FALLBACK =
   process.env.ENABLE_MOCK_SCAN_FALLBACK === "true";
 

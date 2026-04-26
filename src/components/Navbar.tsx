@@ -34,15 +34,11 @@ export function Navbar() {
           onClick={(e) => { e.preventDefault(); window.location.reload(); }}
           className="flex items-center gap-3 cursor-pointer group"
         >
-          <div className="relative w-8 h-8 md:w-9 md:h-9">
-            <Image
-              src="/logo.png"
-              alt="Lumio Logo"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
+          <img
+            src="/logo.png"
+            alt="Lumio Logo"
+            className="w-9 h-9 object-contain"
+          />
           <span className="text-xl md:text-2xl font-black tracking-[0.2em] text-white font-mono uppercase group-hover:text-blue-400 transition-colors">
             LUMIO
           </span>
