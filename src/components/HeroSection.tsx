@@ -55,13 +55,19 @@ export function HeroSection() {
         body: JSON.stringify({ url: normalizedUrl }),
       });
 
-      if (!res.ok) {
-        throw new Error("Scan request failed");
+      let data;
+      try {
+        data = await res.json();
+      } catch (e) {
+        data = null;
       }
 
-      const data = await res.json();
+      if (!res.ok) {
+        throw new Error((data && data.error) || "Scan request failed");
+      }
+
       if (!data?.success || !data?.data) {
-        throw new Error("Invalid scan response");
+        throw new Error((data && data.error) || "Invalid scan response");
       }
 
       clearInterval(progressTimer);
@@ -73,10 +79,10 @@ export function HeroSection() {
         setIsScanning(false);
         setScanComplete(true);
       }, 800);
-    } catch (e) {
+    } catch (e: any) {
       clearInterval(progressTimer);
       setIsScanning(false);
-      setScanError("Scan failed. Please check the URL and try again.");
+      setScanError(e.message || "Scan failed. Please check the URL and try again.");
       console.error(e);
     }
   };
