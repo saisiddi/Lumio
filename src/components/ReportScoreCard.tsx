@@ -1,7 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ReportData } from "@/mock/report";
+
+interface ReportData {
+  score: number;
+  url: string;
+  timestamp: string;
+  passedChecks: number;
+  totalChecks: number;
+  issues: unknown[];
+  aiSuggestions: string[];
+  groupedIssues?: unknown[];
+  severityCounts?: { critical: number; serious: number; moderate: number; minor: number };
+}
 
 export function ReportScoreCard({ report }: { report: ReportData }) {
   // Determine grade
@@ -37,6 +48,22 @@ export function ReportScoreCard({ report }: { report: ReportData }) {
         <div className="text-sm text-zinc-400">
           Scanned at: <span className="text-white">{new Date(report.timestamp).toLocaleString()}</span>
         </div>
+        {report.severityCounts && (
+          <div className="mt-4 flex gap-4">
+            {report.severityCounts.critical > 0 && (
+              <span className="text-status-error">{report.severityCounts.critical} critical</span>
+            )}
+            {report.severityCounts.serious > 0 && (
+              <span className="text-status-warning">{report.severityCounts.serious} serious</span>
+            )}
+            {report.severityCounts.moderate > 0 && (
+              <span className="text-yellow-500">{report.severityCounts.moderate} moderate</span>
+            )}
+            {report.severityCounts.minor > 0 && (
+              <span className="text-brand-electric">{report.severityCounts.minor} minor</span>
+            )}
+          </div>
+        )}
       </div>
 
       <div className="relative w-48 h-48 flex items-center justify-center">

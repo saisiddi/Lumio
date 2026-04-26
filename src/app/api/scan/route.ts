@@ -1,20 +1,57 @@
 import { NextResponse } from "next/server";
-import { mockReportData } from "@/mock/report";
+
+const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:8080";
 
 export async function POST(request: Request) {
   try {
-    const { url } = await request.json();
+    const body = await request.json();
+    const { url, max_pages = 3 } = body;
+    const normalizedUrl = typeof url === "string" ? url.trim() : "";
 
-    // Simulate network delay and analysis time (e.g., 3-5 seconds)
-    await new Promise((resolve) => setTimeout(resolve, 3500));
+    if (!normalizedUrl) {
+      return NextResponse.json(
+        { success: false, error: "URL is required" },
+        { status: 400 }
+      );
+    }
 
-    // Return the mock report data
-    // In a real application, this would call an external service or perform actual DOM analysis
+    try {
+      new URL(normalizedUrl);
+    } catch {
+      return NextResponse.json(
+        { success: false, error: "Please provide a valid URL" },
+        { status: 400 }
+      );
+    }
+
+    const backendResponse = await fetch(`${BACKEND_URL}/scan`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        url: normalizedUrl,
+        max_pages: max_pages,
+      }),
+    });
+
+    if (!backendResponse.ok) {
+      const errorText = await backendResponse.text();
+      return NextResponse.json(
+        { success: false, error: `Backend error: ${errorText}` },
+        { status: backendResponse.status }
+      );
+    }
+
+    const scanData = await backendResponse.json();
+
     return NextResponse.json({
       success: true,
-      data: mockReportData,
+      data: scanData,
+      requestMeta: {
+        capturedUrl: normalizedUrl,
+      },
     });
   } catch (error) {
+    console.error("Scan API error:", error);
     return NextResponse.json(
       { success: false, error: "Failed to scan URL" },
       { status: 500 }
