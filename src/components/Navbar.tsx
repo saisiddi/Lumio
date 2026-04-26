@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Activity } from "lucide-react";
@@ -31,12 +32,18 @@ export function Navbar() {
         <a
           href="/"
           onClick={(e) => { e.preventDefault(); window.location.reload(); }}
-          className="flex items-center gap-2 group cursor-pointer"
+          className="flex items-center gap-3 cursor-pointer group"
         >
-          <div className="relative flex items-center justify-center w-10 h-10 rounded-full bg-blue-500/10 border border-blue-500/30 group-hover:box-glow-blue transition-all duration-500">
-            <Activity className="w-5 h-5 text-[#00E5FF]" />
+          <div className="relative w-8 h-8 md:w-9 md:h-9">
+            <Image
+              src="/logo.png"
+              alt="Lumio Logo"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
-          <span className="text-xl font-bold tracking-wider text-white">
+          <span className="text-xl md:text-2xl font-black tracking-[0.2em] text-white font-mono uppercase group-hover:text-blue-400 transition-colors">
             LUMIO
           </span>
         </a>

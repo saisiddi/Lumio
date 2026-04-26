@@ -31,6 +31,9 @@ import {
   Home,
   RefreshCw,
   ArrowUp,
+  Shield,
+  Zap,
+  Cpu,
 } from "lucide-react";
 
 export function HeroSection() {
@@ -149,9 +152,9 @@ export function HeroSection() {
     }
   };
   const proofBadges = [
-    "Detects contrast, ARIA, keyboard traps, semantic issues",
-    "Prioritized by criticality and user impact",
-    "AI-ready fix snippets with implementation guidance",
+    { text: "Comprehensive WCAG, ARIA & Semantic audits", icon: Shield, color: "text-blue-500" },
+    { text: "Prioritized criticality & user impact scoring", icon: Zap, color: "text-amber-500" },
+    { text: "AI-powered remediation with code-ready fixes", icon: Cpu, color: "text-purple-500" },
   ];
   const flowSteps = [
     { label: "1. URL", value: "lumio.dev" },
@@ -398,18 +401,23 @@ export function HeroSection() {
                   exit={{ opacity: 0 }}
                   className="grid grid-cols-1 md:grid-cols-3 gap-3"
                 >
-                  {proofBadges.map((item, index) => (
+                  {proofBadges.map((badge, index) => (
                     <motion.div
-                      key={item}
+                      key={index}
                       initial={{ opacity: 0, y: 12 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{
                         delay: 0.18 + index * 0.08,
                         duration: 0.45,
                       }}
-                      className="rounded-xl border border-slate-200/90 bg-white/80 px-4 py-3 text-xs md:text-sm text-slate-700 shadow-[0_10px_30px_rgba(15,23,42,0.08)]"
+                      className="group flex items-center gap-3 rounded-xl border border-white/40 bg-white/30 p-2.5 pr-4 shadow-sm backdrop-blur-md transition-all hover:bg-white/50 hover:shadow-md"
                     >
-                      {item}
+                      <div className={`flex items-center justify-center rounded-lg bg-white/80 p-2 shadow-sm ${badge.color}`}>
+                        <badge.icon className="w-3.5 h-3.5" />
+                      </div>
+                      <p className="text-[11px] font-semibold tracking-wide text-slate-500 group-hover:text-slate-800 transition-colors uppercase">
+                        {badge.text}
+                      </p>
                     </motion.div>
                   ))}
                 </motion.div>
