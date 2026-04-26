@@ -29,6 +29,7 @@ export function GlowingButton({
       type={type}
       onClick={onClick}
       disabled={disabled}
+      suppressHydrationWarning
       whileHover={disabled ? {} : { scale: 1.02 }}
       whileTap={disabled ? {} : { scale: 0.98 }}
       className={cn(

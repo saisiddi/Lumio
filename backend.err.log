@@ -1,0 +1,16 @@
+INFO:     Started server process [24256]
+INFO:     Waiting for application startup.
+2026-04-26 07:12:44,852 | INFO | lumio-backend | Application startup complete
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2026-04-26 07:12:44,959 | INFO | lumio-backend | GET /docs -> 200 (0.42ms)
+2026-04-26 07:12:45,010 | INFO | lumio-backend | scan_start url=https://example.com max_pages=1
+2026-04-26 07:12:50,292 | INFO | lumio-backend | scan_duration url=https://example.com duration_ms=5281.06
+2026-04-26 07:13:04,193 | INFO | lumio-backend | ai_processing_duration url=https://example.com duration_ms=13898.63
+2026-04-26 07:13:04,197 | INFO | lumio-backend | scan_end url=https://example.com total_violations=2 duration_ms=19187.28
+2026-04-26 07:13:04,199 | INFO | lumio-backend | POST /scan -> 200 (19192.84ms)
+2026-04-26 07:15:03,517 | INFO | lumio-backend | scan_start url=https://www.google.com/ max_pages=3
+2026-04-26 07:15:12,551 | INFO | lumio-backend | scan_duration url=https://www.google.com/ duration_ms=9031.72
+2026-04-26 07:16:05,214 | INFO | lumio-backend | ai_processing_duration url=https://www.google.com/ duration_ms=52660.33
+2026-04-26 07:16:05,280 | INFO | lumio-backend | scan_end url=https://www.google.com/ total_violations=12 duration_ms=61762.34
+2026-04-26 07:16:05,282 | INFO | lumio-backend | POST /scan -> 200 (61765.66ms)

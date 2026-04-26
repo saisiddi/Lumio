@@ -275,12 +275,12 @@ export function HeroSection() {
               AI Accessibility Intelligence
             </p>
             <h2 className="text-3xl md:text-5xl font-bold tracking-[-0.03em] text-slate-900 leading-[0.95]">
-              Paste a URL. Get Developer-ready Fixes.
+              Paste a URL.
             </h2>
             <p className="text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-              AI does not just score your site. It finds WCAG violations,
-              explains in plain English why they are broken, and generates exact
-              code fixes for the specific element.
+              AI doesn't just score your site — it finds every WCAG violation,
+              explains in plain English why it's broken and generates the exact
+              code fix for that specific element. Not generic advice.
             </p>
           </div>
 
@@ -358,11 +358,10 @@ export function HeroSection() {
                         Accessibility Scan Complete
                       </h2>
                       <p className="text-slate-600 text-sm md:text-base max-w-2xl">
-                        Paste a URL. AI does not just score your site. It finds
-                        every WCAG violation, explains in plain English why it
-                        is broken, and generates the exact code fix for that
-                        specific element. Not generic advice. Exportable as PDF
-                        report.
+                        AI doesn't just score your site — it finds every WCAG
+                        violation, explains in plain English why it's broken and
+                        generates the exact code fix for that specific element.
+                        Not generic advice. Exportable as PDF report.
                       </p>
                       <p className="text-xs text-slate-500 mt-2">
                         API captured:{" "}
@@ -438,7 +437,7 @@ export function HeroSection() {
                           <span>File + line mapping for local repos</span>
                         </div>
                         <p className="mt-2 text-xs text-slate-500">
-                          Copy-paste patch in React, Next.js, or plain HTML.
+                          Copy-paste patch in React, Next.js, or HTML.
                         </p>
                       </div>
                       <p className="text-sm text-slate-600 italic border-l-2 border-brand-electric pl-3 py-1 bg-slate-50 rounded-r-md">
@@ -456,21 +455,21 @@ export function HeroSection() {
                         <ul className="space-y-3 text-sm text-slate-600">
                           <li className="flex items-start">
                             <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-1.5 mr-2 shrink-0" />{" "}
-                            Show impact, affected users, severity, WCAG rule,
+                            show impact, affected users, severity, WCAG rule,
                             and business priority
                           </li>
                           <li className="flex items-start">
                             <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-1.5 mr-2 shrink-0" />{" "}
-                            Group duplicate issues across pages
+                            group duplicate issues across pages
                           </li>
                           <li className="flex items-start">
                             <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-1.5 mr-2 shrink-0" />{" "}
-                            Tell teams what to fix first
+                            tell teams what to fix first
                           </li>
                         </ul>
                         <p className="text-xs text-slate-500 mt-4 pt-3 border-t border-slate-100">
-                          Most accessibility tools overwhelm teams.
-                          Prioritization is a huge differentiator.
+                          Most accessibility tools overwhelm teams. Prioritization
+                          is a huge differentiator.
                         </p>
                       </div>
 
@@ -482,19 +481,19 @@ export function HeroSection() {
                         <ul className="space-y-3 text-sm text-slate-600">
                           <li className="flex items-start">
                             <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-1.5 mr-2 shrink-0" />{" "}
-                            Scan staging/production automatically
+                            scan staging/production automatically
                           </li>
                           <li className="flex items-start">
                             <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-1.5 mr-2 shrink-0" />{" "}
-                            Compare before/after
+                            compare before/after
                           </li>
                           <li className="flex items-start">
                             <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-1.5 mr-2 shrink-0" />{" "}
-                            Alert only on new regressions
+                            alert only on new regressions
                           </li>
                           <li className="flex items-start">
                             <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-1.5 mr-2 shrink-0" />{" "}
-                            Keep an accessibility changelog
+                            keep an accessibility changelog
                           </li>
                         </ul>
                       </div>

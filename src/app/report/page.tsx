@@ -89,7 +89,7 @@ interface ScanResponse {
   violations: ViolationItem[];
 }
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL?.trim() || "http://127.0.0.1:8000";
 
 function mapApiToIssues(violations: ViolationItem[]) {
   return violations.map((v) => ({
@@ -230,9 +230,9 @@ export default function ReportPage() {
         >
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6 border-b border-white/10 pb-8">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tighter mb-3">Accessibility Report</h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tighter mb-3">Developer-ready fixes</h1>
               <p className="text-xl text-zinc-400 font-light tracking-wide">
-                Analysis complete. Review issues and deploy fixes instantly.
+                Paste a URL. AI doesn't just score your site — it finds every WCAG violation, explains in plain English why it's broken and generates the exact code fix for that specific element. Not generic advice. Exportable as PDF report.
               </p>
               <p className="text-sm text-zinc-500 mt-2">
                 Scanned: {reportData.url} | {reportData.scannedPages.length} pages | {reportData.totalViolations} violations
@@ -276,7 +276,7 @@ export default function ReportPage() {
             transition={{ delay: 0.15 }}
             className="glass-card rounded-3xl p-6"
           >
-            <h2 className="text-xl font-semibold text-white mb-4">Issues Across Pages</h2>
+            <h2 className="text-xl font-semibold text-white mb-4">Proof and prioritization</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {reportData.groupedIssues.slice(0, 6).map((group, idx) => (
                 <div key={idx} className="bg-white/5 rounded-xl p-4 border border-white/10">
@@ -295,6 +295,18 @@ export default function ReportPage() {
                 </div>
               ))}
             </div>
+            <p className="text-sm text-zinc-400 mt-4">
+              show impact, affected users, severity, WCAG rule, and business priority
+            </p>
+            <p className="text-sm text-zinc-400 mt-2">
+              group duplicate issues across pages
+            </p>
+            <p className="text-sm text-zinc-400 mt-2">
+              tell teams what to fix first
+            </p>
+            <p className="text-xs text-zinc-500 mt-4 pt-4 border-t border-white/10">
+              Most accessibility tools overwhelm teams. Prioritization is a huge differentiator.
+            </p>
           </motion.div>
         )}
 
@@ -380,7 +392,7 @@ export default function ReportPage() {
               </div>
               <h3 className="text-xl font-semibold tracking-tight">Fixed everything?</h3>
               <p className="text-sm text-zinc-400 font-light leading-relaxed">
-                Deploy your changes and run another scan to verify your accessibility improvements.
+                scan staging/production automatically, compare before/after, alert only on new regressions, keep an accessibility changelog.
               </p>
               <Link href="/" className="block pt-4">
                 <GlowingButton className="w-full">

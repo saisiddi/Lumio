@@ -175,7 +175,7 @@ def call_gemma(prompt: str) -> str:
 
 
 def get_ai_fix(prompt: str) -> dict[str, str]:
-    providers = (("NVIDIA DeepSeek", call_nvidia), ("OpenRouter Gemma", call_gemma))
+    providers = (("OpenRouter Gemma", call_gemma), ("NVIDIA DeepSeek", call_nvidia))
     for provider_name, provider in providers:
         try:
             print(f"Using {provider_name}...")

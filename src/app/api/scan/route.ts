@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
 import { mockReportData } from "@/mock/report";
 
-const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:8080";
+const BACKEND_URL = process.env.BACKEND_URL?.trim() || "http://127.0.0.1:8000";
+const ENABLE_MOCK_SCAN_FALLBACK =
+  process.env.ENABLE_MOCK_SCAN_FALLBACK === "true";
 
 export async function POST(request: Request) {
   try {
@@ -36,7 +38,17 @@ export async function POST(request: Request) {
       });
 
       if (!backendResponse.ok) {
-        throw new Error(`Backend returned status ${backendResponse.status}`);
+        const backendError = await backendResponse
+          .json()
+          .catch(() => ({ error: `Backend returned status ${backendResponse.status}` }));
+
+        return NextResponse.json(
+          {
+            success: false,
+            error: backendError?.error || `Backend returned status ${backendResponse.status}`,
+          },
+          { status: backendResponse.status }
+        );
       }
 
       const scanData = await backendResponse.json();
@@ -49,11 +61,25 @@ export async function POST(request: Request) {
         },
       });
     } catch (backendError) {
-      console.warn("Backend scan failed or unavailable, falling back to mock data.", backendError);
-      
-      // Simulate slight delay for realism when falling back to mock
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
+      if (!ENABLE_MOCK_SCAN_FALLBACK) {
+        return NextResponse.json(
+          {
+            success: false,
+            error:
+              "Backend scan service is unavailable. Ensure backend is running and BACKEND_URL is correct.",
+          },
+          { status: 502 }
+        );
+      }
+
+      console.warn(
+        "Backend scan failed or unavailable, falling back to mock data.",
+        backendError
+      );
+
+      // Simulate slight delay for realism when falling back to mock.
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+
       return NextResponse.json({
         success: true,
         data: {

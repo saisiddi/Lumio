@@ -1,35 +1,7 @@
 [browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
-Backend scan failed or unavailable, falling back to mock data. TypeError: fetch failed
-    at async POST (src\app\api\scan\route.ts:29:31)
-  27 |
-  28 |     try {
-> 29 |       const backendResponse = await fetch(`${BACKEND_URL}/scan`, {
-     |                               ^
-  30 |         method: "POST",
-  31 |         headers: { "Content-Type": "application/json" },
-  32 |         body: JSON.stringify({ {
-  [cause]: AggregateError: 
-      at ignore-listed frames {
-    code: 'ECONNREFUSED',
-    [errors]: [ [Error], [Error] ]
-  }
-}
 [browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
-Backend scan failed or unavailable, falling back to mock data. TypeError: fetch failed
-    at async POST (src\app\api\scan\route.ts:29:31)
-  27 |
-  28 |     try {
-> 29 |       const backendResponse = await fetch(`${BACKEND_URL}/scan`, {
-     |                               ^
-  30 |         method: "POST",
-  31 |         headers: { "Content-Type": "application/json" },
-  32 |         body: JSON.stringify({ {
-  [cause]: AggregateError: 
-      at ignore-listed frames {
-    code: 'ECONNREFUSED',
-    [errors]: [ [Error], [Error] ]
-  }
-}
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
 [browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
@@ -69,36 +41,13 @@ https://react.dev/link/hydration-mismatch
                                     tabIndex={0}
                                     style={{}}
                                     ref={function useMotionRef.useCallback}
--                                   fdprocessedid="lksscb"
+-                                   fdprocessedid="3lb7tz"
                                   >
                               <div>
                               <button
                                 type="button"
                                 className="w-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/10 rounded..."
--                               fdprocessedid="u6mpt"
+-                               fdprocessedid="4aau72"
                               >
  
-Scan API error: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
-    at JSON.parse (<anonymous>)
-Scan API error: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
-    at JSON.parse (<anonymous>)
-Scan API error: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
-    at JSON.parse (<anonymous>)
-Backend scan failed or unavailable, falling back to mock data. TypeError: fetch failed
-    at async POST (src\app\api\scan\route.ts:29:31)
-  27 |
-  28 |     try {
-> 29 |       const backendResponse = await fetch(`${BACKEND_URL}/scan`, {
-     |                               ^
-  30 |         method: "POST",
-  31 |         headers: { "Content-Type": "application/json" },
-  32 |         body: JSON.stringify({ {
-  [cause]: AggregateError: 
-      at ignore-listed frames {
-    code: 'ECONNREFUSED',
-    [errors]: [ [Error], [Error] ]
-  }
-}
-Scan API error: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
-    at JSON.parse (<anonymous>)
 [browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)
