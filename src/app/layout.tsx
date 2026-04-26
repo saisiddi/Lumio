@@ -19,11 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-<<<<<<< HEAD
     <html lang="en" className={`${inter.variable} ${space.variable} dark`} suppressHydrationWarning>
-=======
-    <html lang="en" className={`${inter.variable} ${space.variable} dark`}>
->>>>>>> 39524d9b3c8798c463ee2d848a8bd7c33c6f9e72
       <body className="antialiased min-h-screen flex flex-col" suppressHydrationWarning>
         <AuthProvider>
           <Navbar />
